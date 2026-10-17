@@ -7,9 +7,10 @@ interface DetailModalProps {
   guide: PokemonClearGuide | null;
   isLoading?: boolean;
   onClose: () => void;
+  onBuildParty?: (pokemonId: number) => void;
 }
 
-export const DetailModal: React.FC<DetailModalProps> = ({ guide, isLoading, onClose }) => {
+export const DetailModal: React.FC<DetailModalProps> = ({ guide, isLoading, onClose, onBuildParty }) => {
   if (!guide && !isLoading) return null;
 
   return (
@@ -35,12 +36,22 @@ export const DetailModal: React.FC<DetailModalProps> = ({ guide, isLoading, onCl
               </h2>
             )}
           </div>
-          <button
-            onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="flex items-center space-x-2">
+            {guide && onBuildParty && (
+              <button
+                onClick={() => onBuildParty(guide.id)}
+                className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold shadow-md shadow-indigo-600/20 transition-all hover:scale-105"
+              >
+                <span>이 포켓몬으로 파티 짜기</span>
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="p-1.5 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Modal Scrollable Body */}

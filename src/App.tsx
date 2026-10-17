@@ -28,6 +28,7 @@ export const App: React.FC = () => {
   const [selectedGuide, setSelectedGuide] = useState<PokemonClearGuide | null>(null);
   const [isGuideLoading, setIsGuideLoading] = useState(false);
   const [isPartyModalOpen, setIsPartyModalOpen] = useState(false);
+  const [partyProtagonist, setPartyProtagonist] = useState<BasicPokemon | null>(null);
 
   // Filtered Pokémon
   const filteredList = useMemo(() => {
@@ -190,11 +191,21 @@ export const App: React.FC = () => {
           setSelectedGuide(null);
           setIsGuideLoading(false);
         }}
+        onBuildParty={(pokemonId) => {
+          const found = allPokemonList.find((p) => p.id === pokemonId);
+          if (found) {
+            setPartyProtagonist(found);
+            setSelectedGuide(null);
+            setIsPartyModalOpen(true);
+          }
+        }}
       />
 
       <PartyModal
         isOpen={isPartyModalOpen}
         onClose={() => setIsPartyModalOpen(false)}
+        allPokemon={allPokemonList}
+        initialPokemon={partyProtagonist}
       />
     </div>
   );
