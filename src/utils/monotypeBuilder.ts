@@ -1,4 +1,4 @@
-import { ClearPartyEntry, PartyMember, PokemonType } from '../types/pokemon';
+import { PartyMember, PokemonType } from '../types/pokemon';
 
 export interface MonotypeGuide {
   type: PokemonType;
@@ -8,7 +8,7 @@ export interface MonotypeGuide {
   members: PartyMember[];
 }
 
-export const MONOTYPE_GUIDES: Partial<Record<PokemonType, MonotypeGuide>> = {
+export const MONOTYPE_GUIDES: Record<PokemonType, MonotypeGuide> = {
   '물': {
     type: '물',
     title: '물 타입 통일 챌린지 (수중 제국 파티)',
@@ -305,7 +305,7 @@ export const MONOTYPE_GUIDES: Partial<Record<PokemonType, MonotypeGuide>> = {
       },
       {
         pokemonId: 272,
-        nameKo: '루돌록 (Ludicolo)',
+        nameKo: '로파파 (Ludicolo)',
         role: '쓱쓱 물/얼음 저격수',
         types: ['물', '풀'],
         spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/272.png',
@@ -326,6 +326,726 @@ export const MONOTYPE_GUIDES: Partial<Record<PokemonType, MonotypeGuide>> = {
         heldItem: '기합의띠',
         keyMoves: ['트릭플라워', '탁쳐서떨구기', '치근거리기', '유턴'],
         synergyReason: '100% 급소 트릭플라워와 초고속 유턴으로 선공권 장악'
+      }
+    ]
+  },
+  '독': {
+    type: '독',
+    title: '독 타입 통일 챌린지 (맹독의 판데믹 파티)',
+    concept: '풀, 페어리를 자속으로 녹이고 5개 타입(풀, 격투, 독, 벌레, 페어리)을 반감하는 내구형 파티.',
+    weaknessStrategy: '양대 약점인 [땅, 에스퍼] 중 땅은 [독/비행] 크로뱃이 0배로 완전히 무효화하며, 에스퍼는 [고스트/독] 팬텀과 [악/독] 스콜피가 저격합니다.',
+    members: [
+      {
+        pokemonId: 94,
+        nameKo: '팬텀 (Gengar)',
+        role: '에스퍼 저격 & 고속 특수 폭딜러',
+        types: ['고스트', '독'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['섀도볼', '오물폭탄', '10만볼트', '기합구슬'],
+        synergyReason: '고스트 자속 섀도볼로 독 파티의 천적인 에스퍼 타입을 선공 원턴킬'
+      },
+      {
+        pokemonId: 169,
+        nameKo: '크로뱃 (Crobat)',
+        role: '땅 0배 완전 무효화 & 고속 유턴',
+        types: ['독', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['브레이브버드', '크로스포이즌', '유턴', '날개쉬기'],
+        synergyReason: '비행 복합으로 독 타입 최대 천적인 땅 공격(지진)을 0배로 흘려버림'
+      },
+      {
+        pokemonId: 747,
+        nameKo: '더시마사리 (Toxapex)',
+        role: '재생력 난공불락 물리벽',
+        types: ['독', '물'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/747.png',
+        nature: '대담 (Bold, 방어↑/공격↓)',
+        evSummary: 'HP 252 / 방어 252 / 특방 4',
+        heldItem: '검은진흙',
+        keyMoves: ['열탕', 'HP회복', '맹독', '흑안개'],
+        synergyReason: '물 복합으로 얼음/강철/불꽃을 반감하고 상대 물리 딜러를 화상으로 무력화'
+      },
+      {
+        pokemonId: 3,
+        nameKo: '이상해꽃 (Venusaur)',
+        role: '땅 2배 카운터 & 엽록소 딜탱',
+        types: ['풀', '독'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png',
+        nature: '조심 (Modest, 특공↑/공격↓)',
+        evSummary: 'HP 252 / 특공 252 / 특방 4',
+        heldItem: '자뭉열매',
+        keyMoves: ['기가드레인', '오물폭탄', '대지의힘', '수면가루'],
+        synergyReason: '풀 자속 기가드레인으로 상대 땅/바위/물 포켓몬을 역으로 흡수 소탕'
+      },
+      {
+        pokemonId: 849,
+        nameKo: '스트린더 (Toxtricity)',
+        role: '물/비행 격추 전기 대포',
+        types: ['전기', '독'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/849.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '목구멍스프레이',
+        keyMoves: ['오버드라이브', '오물폭탄', '폭음파', '볼트체인지'],
+        synergyReason: '전기 자속 오버드라이브로 물/비행 포켓몬을 시원하게 소탕'
+      },
+      {
+        pokemonId: 34,
+        nameKo: '니드킹 (Nidoking)',
+        role: '우격다짐 4색 견제 폭격기',
+        types: ['독', '땅'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png',
+        nature: '조심 (Modest, 특공↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['대지의힘', '오물웨이브', '냉동빔', '화염방사'],
+        synergyReason: '전기 무효 및 땅/얼음/불꽃 기술로 강철/드래곤/풀/전기 포켓몬 올킬'
+      }
+    ]
+  },
+  '땅': {
+    type: '땅',
+    title: '땅 타입 통일 챌린지 (대지진의 격진 파티)',
+    concept: '전기 공격 0배 완전 무효! 불꽃, 전기, 독, 바위, 강철 등 5대 메이저 타입을 부수는 최강의 공격 상성.',
+    weaknessStrategy: '약점인 [물, 풀, 얼음] 중 물은 [물/땅] 마중물 트리토돈이 흡수하고, 풀은 [땅/비행] 글라이온, 얼음은 [땅/강철] 몰드류가 반감합니다.',
+    members: [
+      {
+        pokemonId: 445,
+        nameKo: '한카리아스 (Garchomp)',
+        role: '필드 물리 파괴신 & 주인공',
+        types: ['드래곤', '땅'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '구애머리띠',
+        keyMoves: ['지진', '역린', '스톤에지', '칼춤'],
+        synergyReason: '본가 최고의 물리 어태커로 모든 적을 지진과 역린으로 짓밟음'
+      },
+      {
+        pokemonId: 530,
+        nameKo: '몰드류 (Excadrill)',
+        role: '얼음/풀 반감 틀깨기 어태커',
+        types: ['땅', '강철'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['지진', '아이언헤드', '락블라스트', '칼춤'],
+        synergyReason: '강철 복합으로 땅의 약점인 얼음/풀/페어리를 반감하고 부유 포켓몬도 지진으로 타격'
+      },
+      {
+        pokemonId: 472,
+        nameKo: '글라이온 (Gliscor)',
+        role: '풀/격투 반감 포이즌힐 불사신',
+        types: ['땅', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png',
+        nature: '장난꾸러기 (Impish, 방어↑/특공↓)',
+        evSummary: 'HP 252 / 방어 252 / 스피드 4',
+        heldItem: '맹독구슬',
+        keyMoves: ['지진', '날개쉬기', '방어', '대타출동'],
+        synergyReason: '비행 복합으로 땅 공격을 0배로 받고 풀 공격도 반감하는 방어 요새'
+      },
+      {
+        pokemonId: 473,
+        nameKo: '맘모꾸리 (Mamoswine)',
+        role: '풀/비행/드래곤 저격수',
+        types: ['얼음', '땅'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['지진', '고드름침', '얼음뭉치', '스톤에지'],
+        synergyReason: '얼음 선공기 얼음뭉치로 땅 파티를 노리는 풀/비행/드래곤 포켓몬 즉사'
+      },
+      {
+        pokemonId: 423,
+        nameKo: '트리토돈 (Gastrodon)',
+        role: '마중물 물 공격 100% 흡수벽',
+        types: ['물', '땅'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png',
+        nature: '차분 (Calm, 특방↑/공격↓)',
+        evSummary: 'HP 252 / 특방 252 / 방어 4',
+        heldItem: '먹다남은음식',
+        keyMoves: ['열탕', '대지의힘', 'HP회복', '냉동빔'],
+        synergyReason: '특성 마중물로 땅 파티의 천적인 물 공격을 흡수하여 특공 1랭크 업'
+      },
+      {
+        pokemonId: 450,
+        nameKo: '하마돈 (Hippowdon)',
+        role: '모래날림 물리 철벽 & 하품 기점',
+        types: ['땅'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/450.png',
+        nature: '장난꾸러기 (Impish, 방어↑/특공↓)',
+        evSummary: 'HP 252 / 방어 252 / 특방 4',
+        heldItem: '자뭉열매',
+        keyMoves: ['지진', '하품', '게으름피우기', '스텔스록'],
+        synergyReason: '모래날림으로 적에게 지속 데미지를 주고 하품으로 한카리아스 칼춤 각 형성'
+      }
+    ]
+  },
+  '얼음': {
+    type: '얼음',
+    title: '얼음 타입 통일 챌린지 (절대영도의 설산 파티)',
+    concept: '풀, 땅, 비행, 드래곤 4대 메이저 타입을 분쇄하는 최강의 공격력과 껍질깨기 스위퍼 파티.',
+    weaknessStrategy: '약점인 [불꽃, 격투, 바위, 강철] 중 불꽃/바위/강철은 [얼음/땅] 맘모꾸리가 지진으로 잡고, 격투는 [얼음/고스트] 눈여아가 0배로 흘립니다.',
+    members: [
+      {
+        pokemonId: 91,
+        nameKo: '파르셀 (Cloyster)',
+        role: '껍질깨기 5연타 전설의 스위퍼',
+        types: ['물', '얼음'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['고드름침', '락블라스트', '하이드로펌프', '껍질깨기'],
+        synergyReason: '물 복합으로 불꽃/강철을 1배로 받고 껍질깨기 후 5연타로 올스윕'
+      },
+      {
+        pokemonId: 473,
+        nameKo: '맘모꾸리 (Mamoswine)',
+        role: '불꽃/바위/강철 카운터 물리벽',
+        types: ['얼음', '땅'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['지진', '고드름침', '얼음뭉치', '스톤에지'],
+        synergyReason: '땅 자속 지진으로 얼음의 천적인 불꽃, 바위, 강철을 한 방에 일소'
+      },
+      {
+        pokemonId: 461,
+        nameKo: '포푸니라 (Weavile)',
+        role: '초고속 에스퍼/고스트 암살자',
+        types: ['악', '얼음'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['고드름떨구기', '탁쳐서떨구기', '얼음뭉치', '칼춤'],
+        synergyReason: '스피드 125로 선공을 잡고 탁쳐서떨구기로 적의 도구를 날리며 활약'
+      },
+      {
+        pokemonId: 478,
+        nameKo: '눈여아 (Froslass)',
+        role: '격투 0배 완전 무효화 요원',
+        types: ['얼음', '고스트'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/478.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['냉동빔', '섀도볼', '길동무', '도깨비불'],
+        synergyReason: '고스트 복합으로 얼음의 치명적 약점인 격투 공격을 0배로 무효화'
+      },
+      {
+        pokemonId: 131,
+        nameKo: '라프라스 (Lapras)',
+        role: '저수 & 특수 방어 요새',
+        types: ['물', '얼음'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png',
+        nature: '조심 (Modest, 특공↑/공격↓)',
+        evSummary: 'HP 252 / 특공 252 / 특방 4',
+        heldItem: '돌격조끼',
+        keyMoves: ['하이드로펌프', '냉동빔', '10만볼트', '프리즈드라이'],
+        synergyReason: '프리즈드라이로 물 포켓몬을 4배 저격하고 특수기를 흡수'
+      },
+      {
+        pokemonId: 460,
+        nameKo: '눈설왕 (Abomasnow)',
+        role: '눈퍼뜨리기 필중 눈보라 서포터',
+        types: ['풀', '얼음'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png',
+        nature: '조심 (Modest, 특공↑/공격↓)',
+        evSummary: 'HP 252 / 특공 252 / 특방 4',
+        heldItem: '빛의점토',
+        keyMoves: ['눈보라', '기가드레인', '오로라베일', '얼음뭉치'],
+        synergyReason: '오로라베일로 5턴간 아군 전체 데미지 50% 경감 버프 형성'
+      }
+    ]
+  },
+  '비행': {
+    type: '비행',
+    title: '비행 타입 통일 챌린지 (창공의 날개 파티)',
+    concept: '땅 공격 0배 완전 무효! 압도적인 기동력과 다양한 이중 타입으로 전장을 누비는 파티.',
+    weaknessStrategy: '약점인 [전기, 바위, 얼음] 중 전기는 [비행/땅] 글라이온이 0배 무효화하고, 바위/얼음은 [비행/강철] 아머까오가 반감합니다.',
+    members: [
+      {
+        pokemonId: 823,
+        nameKo: '아머까오 (Corviknight)',
+        role: '바위/얼음 반감 물리 철벽',
+        types: ['비행', '강철'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png',
+        nature: '장난꾸러기 (Impish, 방어↑/특공↓)',
+        evSummary: 'HP 252 / 방어 252 / 특방 4',
+        heldItem: '울퉁불퉁멧',
+        keyMoves: ['브레이브버드', '철벽', '날개쉬기', '바디프레스'],
+        synergyReason: '강철 복합으로 비행의 약점인 바위/얼음을 0.5배로 완벽 방어'
+      },
+      {
+        pokemonId: 468,
+        nameKo: '토게키스 (Togekiss)',
+        role: '하늘의은총 60% 무한 풀죽음',
+        types: ['페어리', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/468.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '왕의징표석',
+        keyMoves: ['에어슬래시', '매지컬샤인', '파동탄', '날개쉬기'],
+        synergyReason: '파동탄으로 강철/바위/얼음 포켓몬의 약점을 특수기로 2배 저격'
+      },
+      {
+        pokemonId: 472,
+        nameKo: '글라이온 (Gliscor)',
+        role: '전기 공격 0배 완전 무효화',
+        types: ['땅', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png',
+        nature: '장난꾸러기 (Impish, 방어↑/특공↓)',
+        evSummary: 'HP 252 / 방어 252 / 스피드 4',
+        heldItem: '맹독구슬',
+        keyMoves: ['지진', '날개쉬기', '방어', '가위자르기'],
+        synergyReason: '땅 복합으로 비행 파티의 최대 천적인 전기 공격을 0배로 흡수'
+      },
+      {
+        pokemonId: 130,
+        nameKo: '갸라도스 (Gyarados)',
+        role: '위협 & 용의춤 스위퍼',
+        types: ['물', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '자뭉열매',
+        keyMoves: ['폭포오르기', '지진', '얼음엄니', '용의춤'],
+        synergyReason: '물 자속기로 바위/불꽃 포켓몬을 지진과 폭포오르기로 처단'
+      },
+      {
+        pokemonId: 6,
+        nameKo: '리자몽 (Charizard)',
+        role: '얼음 척살 고화력 특수포',
+        types: ['불꽃', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['화염방사', '에어슬래시', '기합구슬', '솔라빔'],
+        synergyReason: '불꽃 자속기로 비행 파티를 위협하는 얼음/강철 타입을 전소'
+      },
+      {
+        pokemonId: 398,
+        nameKo: '찌르호크 (Staraptor)',
+        role: '이판사판 인파이트 물리 폭탄',
+        types: ['노말', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '구애머리띠',
+        keyMoves: ['브레이브버드', '인파이트', '유턴', '전광석화'],
+        synergyReason: '초고위력 인파이트로 바위/얼음 포켓몬을 먼저 선공 원턴킬'
+      }
+    ]
+  },
+  '에스퍼': {
+    type: '에스퍼',
+    title: '에스퍼 타입 통일 챌린지 (초능력 염동력 파티)',
+    concept: '격투, 독 타입을 자속으로 지워버리는 강력한 특수 공격력과 상태이상 반사 파티.',
+    weaknessStrategy: '약점인 [벌레, 고스트, 악] 중 벌레는 [에스퍼/강철] 메타그로스가 반감하고, 악은 [에스퍼/페어리] 가디안이 문포스로 분쇄합니다.',
+    members: [
+      {
+        pokemonId: 65,
+        nameKo: '후딘 (Alakazam)',
+        role: '특공 135 초고속 특수 어태커',
+        types: ['에스퍼'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['사이코키네시스', '섀도볼', '기합구슬', '명상'],
+        synergyReason: '매직가드로 상태이상 데미지를 무시하며 기합구슬로 악 타입 저격'
+      },
+      {
+        pokemonId: 282,
+        nameKo: '가디안 (Gardevoir)',
+        role: '악 척살 페어리 슬레이어',
+        types: ['에스퍼', '페어리'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '구애스카프',
+        keyMoves: ['문포스', '사이코키네시스', '기합구슬', '트릭'],
+        synergyReason: '페어리 복합으로 악 타입을 2배 문포스로 사냥하고 드래곤 0배 무효'
+      },
+      {
+        pokemonId: 376,
+        nameKo: '메타그로스 (Metagross)',
+        role: '벌레/고스트 반감 물리 요새',
+        types: ['강철', '에스퍼'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '돌격조끼',
+        keyMoves: ['코멧펀치', '사념의박치기', '지진', '불릿펀치'],
+        synergyReason: '강철 복합으로 독 무효 및 벌레를 반감하는 단단한 600족 물리벽'
+      },
+      {
+        pokemonId: 80,
+        nameKo: '야도란 (Slowbro)',
+        role: '재생력 물리 방어 요새',
+        types: ['물', '에스퍼'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png',
+        nature: '대담 (Bold, 방어↑/공격↓)',
+        evSummary: 'HP 252 / 방어 252 / 특공 4',
+        heldItem: '자뭉열매',
+        keyMoves: ['열탕', '사이코키네시스', '태만함', '철벽'],
+        synergyReason: '물 복합으로 불꽃/얼음/강철을 반감하고 열탕 화상으로 물리딜 차단'
+      },
+      {
+        pokemonId: 437,
+        nameKo: '동탁군 (Bronzong)',
+        role: '부유 땅 무효 & 트릭룸',
+        types: ['강철', '에스퍼'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/437.png',
+        nature: '무사태평 (Relaxed, 방어↑/스피드↓)',
+        evSummary: 'HP 252 / 방어 252 / 특방 4',
+        heldItem: '먹다남은음식',
+        keyMoves: ['자이로볼', '사념의박치기', '스텔스록', '트릭룸'],
+        synergyReason: '부유 특성으로 땅 0배 무효 및 스텔스록으로 아군 기점 마련'
+      },
+      {
+        pokemonId: 196,
+        nameKo: '에브이 (Espeon)',
+        role: '매직밀러 상태이상 반사 요원',
+        types: ['에스퍼'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['사이코키네시스', '섀도볼', '매지컬샤인', '명상'],
+        synergyReason: '특성 매직밀러로 적의 스텔스록, 도깨비불, 하품 등을 100% 반사'
+      }
+    ]
+  },
+  '바위': {
+    type: '바위',
+    title: '바위 타입 통일 챌린지 (철벽 금강석 파티)',
+    concept: '모래날림으로 특수방어 1.5배 상승! 불꽃, 비행, 벌레, 얼음을 깨부수는 물리 중장갑 파티.',
+    weaknessStrategy: '약점인 [물, 풀, 격투, 땅, 강철] 중 땅은 [바위/비행] 프테라가 0배 무효화하고, 물/강철은 지진과 격투 서브기로 돌파합니다.',
+    members: [
+      {
+        pokemonId: 248,
+        nameKo: '마기라스 (Tyranitar)',
+        role: '모래날림 특수방어 괴물 에이스',
+        types: ['바위', '악'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '구애머리띠',
+        keyMoves: ['스톤에지', '깨물어부수기', '지진', '냉동펀치'],
+        synergyReason: '모래바람으로 바위 타입 아군 전체의 특수방어를 1.5배 증가시킴'
+      },
+      {
+        pokemonId: 142,
+        nameKo: '프테라 (Aerodactyl)',
+        role: '땅 0배 무효 & 초고속 스위퍼',
+        types: ['바위', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['스톤에지', '날개치기', '지진', '스텔스록'],
+        synergyReason: '비행 복합으로 바위의 최대 약점인 땅 공격을 0배로 흘려버림'
+      },
+      {
+        pokemonId: 464,
+        nameKo: '거대코뿌리 (Rhyperior)',
+        role: '하드록 물리 철벽 브루저',
+        types: ['땅', '바위'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '돌격조끼',
+        keyMoves: ['지진', '락블라스트', '불꽃펀치', '메가폰'],
+        synergyReason: '특성 하드록으로 약점 데미지를 25% 경감하며 돌격조끼로 버팀'
+      },
+      {
+        pokemonId: 639,
+        nameKo: '테라키온 (Terrakion)',
+        role: '강철/얼음 박살 격투 에이스',
+        types: ['바위', '격투'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/639.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['인파이트', '스톤에지', '지진', '칼춤'],
+        synergyReason: '격투 자속 인파이트로 바위의 약점인 강철/얼음 포켓몬을 역파괴'
+      },
+      {
+        pokemonId: 745,
+        nameKo: '루가루암 (Lycanroc)',
+        role: '자속 선공 액셀록 청소부',
+        types: ['바위'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['액셀록', '스톤에지', '인파이트', '도발'],
+        synergyReason: '자속 바위 선공기 액셀록으로 빨피가 된 적들을 안전하게 마무리'
+      },
+      {
+        pokemonId: 139,
+        nameKo: '암스타 (Omastar)',
+        role: '껍질깨기 특수 대포',
+        types: ['바위', '물'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png',
+        nature: '조심 (Modest, 특공↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '하양허브',
+        keyMoves: ['하이드로펌프', '원시의힘', '냉동빔', '껍질깨기'],
+        synergyReason: '물 자속으로 불꽃/땅 포켓몬을 시원하게 소탕하고 냉동빔으로 풀 저격'
+      }
+    ]
+  },
+  '악': {
+    type: '악',
+    title: '악 타입 통일 챌린지 (칠흑의 그림자 파티)',
+    concept: '에스퍼 공격 0배 완전 무효! 탁쳐서떨구기, 기습, 속임수로 상대를 농락하는 지능형 파티.',
+    weaknessStrategy: '약점인 [격투, 벌레, 페어리] 중 페어리/벌레는 [악/강철] 대도각참이 반감하고, 격투는 [악/비행]이나 [악/고스트]로 차단합니다.',
+    members: [
+      {
+        pokemonId: 983,
+        nameKo: '대도각참 (Kingambit)',
+        role: '페어리/벌레 반감 & 총대장 에이스',
+        types: ['악', '강철'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/983.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '검은안경',
+        keyMoves: ['도각참', '아이언헤드', '기습', '칼춤'],
+        synergyReason: '강철 복합으로 악의 약점인 페어리/벌레를 반감하고 강력한 기습 난사'
+      },
+      {
+        pokemonId: 635,
+        nameKo: '삼삼드래 (Hydreigon)',
+        role: '부유 땅 무효 & 특수 폭격기',
+        types: ['악', '드래곤'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/635.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '구애안경',
+        keyMoves: ['용성군', '악의파동', '화염방사', '러스터캐논'],
+        synergyReason: '화염방사로 벌레/강철을 태우고 러스터캐논으로 페어리 2배 저격'
+      },
+      {
+        pokemonId: 658,
+        nameKo: '개굴닌자 (Greninja)',
+        role: '초고속 물/얼음 스위퍼',
+        types: ['물', '악'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['하이드로펌프', '악의파동', '냉동빔', '유턴'],
+        synergyReason: '물/얼음 기술로 불꽃/땅/드래곤/비행 포켓몬을 넓은 타점으로 공략'
+      },
+      {
+        pokemonId: 248,
+        nameKo: '마기라스 (Tyranitar)',
+        role: '모래날림 600족 물리 괴물',
+        types: ['바위', '악'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '자뭉열매',
+        keyMoves: ['스톤에지', '탁쳐서떨구기', '지진', '용의춤'],
+        synergyReason: '불꽃/비행을 바위 자속으로 격추하고 모래바람으로 특방 강화'
+      },
+      {
+        pokemonId: 197,
+        nameKo: '블래키 (Umbreon)',
+        role: '싱크로 난공불락 상태이상 벽',
+        types: ['악'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png',
+        nature: '장난꾸러기 (Impish, 방어↑/특공↓)',
+        evSummary: 'HP 252 / 방어 252 / 특방 4',
+        heldItem: '먹다남은음식',
+        keyMoves: ['속임수', '희망사항', '하품', '방어'],
+        synergyReason: '하품으로 상대를 재우고 적의 공격력으로 때리는 속임수로 버팀'
+      },
+      {
+        pokemonId: 461,
+        nameKo: '포푸니라 (Weavile)',
+        role: '고속 페어리/드래곤 암살자',
+        types: ['악', '얼음'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['고드름떨구기', '탁쳐서떨구기', '얼음뭉치', '칼춤'],
+        synergyReason: '스피드 125로 선공 얼음뭉치를 날려 드래곤/비행 포켓몬 즉사'
+      }
+    ]
+  },
+  '벌레': {
+    type: '벌레',
+    title: '벌레 타입 통일 챌린지 (곤충 군단의 역습 파티)',
+    concept: '풀, 에스퍼, 악 타입을 찌르고 테크니션, 나비춤, 가속 등 사기적인 전용 특성으로 무장한 파티.',
+    weaknessStrategy: '약점인 [불꽃, 비행, 바위] 중 불꽃은 [벌레/물] 갑주무사가 막고, 비행은 [벌레/전기] 전툴라가 100% 필중 번개로 격추합니다.',
+    members: [
+      {
+        pokemonId: 212,
+        nameKo: '핫삼 (Scizor)',
+        role: '테크니션 불릿펀치 물리 에이스',
+        types: ['벌레', '강철'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '생명의구슬',
+        keyMoves: ['불릿펀치', '유턴', '인파이트', '칼춤'],
+        synergyReason: '강철 복합으로 불꽃을 제외한 모든 공격을 반감하고 선공 불릿펀치 난사'
+      },
+      {
+        pokemonId: 637,
+        nameKo: '불카모스 (Volcarona)',
+        role: '나비춤 특수 파괴신',
+        types: ['벌레', '불꽃'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '리샘열매',
+        keyMoves: ['불대문자', '벌레의야단법석', '기가드레인', '나비춤'],
+        synergyReason: '나비춤 후 기가드레인으로 물/바위 포켓몬을 역으로 흡수 소탕'
+      },
+      {
+        pokemonId: 214,
+        nameKo: '헤라크로스 (Heracross)',
+        role: '바위/강철 분쇄 격투 브루저',
+        types: ['벌레', '격투'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '구애스카프',
+        keyMoves: ['인파이트', '메가폰', '스톤에지', '탁쳐서떨구기'],
+        synergyReason: '격투 자속 인파이트로 벌레의 약점인 바위/강철 포켓몬을 부숴버림'
+      },
+      {
+        pokemonId: 768,
+        nameKo: '갑주무사 (Golisopod)',
+        role: '불꽃 1배 반감 & 만나자마자 선공',
+        types: ['벌레', '물'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/768.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '자뭉열매',
+        keyMoves: ['만나자마자', '아쿠아브레이크', '아쿠아제트', '흡혈'],
+        synergyReason: '물 복합으로 불꽃을 1배로 막아내며 위력 90 선공기 만나자마자 폭딜'
+      },
+      {
+        pokemonId: 596,
+        nameKo: '전툴라 (Galvantula)',
+        role: '비행 격추 복안 100% 번개',
+        types: ['벌레', '전기'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/596.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '기합의띠',
+        keyMoves: ['번개', '벌레의야단법석', '볼트체인지', '끈적끈적네트'],
+        synergyReason: '복안 특성으로 명중 91% 번개를 꽂아 비행 포켓몬을 즉시 격추'
+      },
+      {
+        pokemonId: 589,
+        nameKo: '슈바르고 (Escavalier)',
+        role: '돌격조끼 난공불락 중장갑',
+        types: ['벌레', '강철'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/589.png',
+        nature: '용감 (Brave, 공격↑/스피드↓)',
+        evSummary: 'HP 252 / 공격 252 / 특방 4',
+        heldItem: '돌격조끼',
+        keyMoves: ['아이언헤드', '메가폰', '드릴라이너', '탁쳐서떨구기'],
+        synergyReason: '방어 105 / 특방 105에 돌격조끼로 적의 특수기를 막아내는 이동식 요새'
+      }
+    ]
+  },
+  '노말': {
+    type: '노말',
+    title: '노말 타입 통일 챌린지 (무한 잠재력 올라운더 파티)',
+    concept: '약점이 [격투] 단 1개! 고스트 0배 무효와 사기적인 기술폭으로 어떤 타입이든 찌르는 만능 파티.',
+    weaknessStrategy: '유일한 약점인 [격투]는 [노말/비행] 찌르호크가 0.5배로 반감하고 [노말/에스퍼] 키키링이 2배 자속으로 응징합니다.',
+    members: [
+      {
+        pokemonId: 113,
+        nameKo: '럭키 (Chansey)',
+        role: '세계 최강 진화의휘석 특수벽',
+        types: ['노말'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png',
+        nature: '대담 (Bold, 방어↑/공격↓)',
+        evSummary: '방어 252 / 특방 252 / HP 4',
+        heldItem: '진화의휘석',
+        keyMoves: ['지구던지기', '알낳기', '작아지기', '전기자석파'],
+        synergyReason: 'HP 250 + 휘석으로 상대의 모든 특수공격을 흠집도 안 나게 흡수'
+      },
+      {
+        pokemonId: 143,
+        nameKo: '잠만보 (Snorlax)',
+        role: '두꺼운지방 & 저주 물리 브루저',
+        types: ['노말'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: 'HP 252 / 공격 252 / 방어 4',
+        heldItem: '무화열매',
+        keyMoves: ['이판사판태클', '지진', '냉동펀치', '저주'],
+        synergyReason: '두꺼운지방으로 불꽃/얼음을 반감하고 저주 랭업 후 역스윕'
+      },
+      {
+        pokemonId: 398,
+        nameKo: '찌르호크 (Staraptor)',
+        role: '격투 반감 & 이판사판 인파이트',
+        types: ['노말', '비행'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png',
+        nature: '명랑 (Jolly, 스피드↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '구애머리띠',
+        keyMoves: ['브레이브버드', '인파이트', '유턴', '전광석화'],
+        synergyReason: '비행 복합으로 노말의 유일한 약점인 격투를 0.5배로 틀어막음'
+      },
+      {
+        pokemonId: 981,
+        nameKo: '키키링 (Farigiraf)',
+        role: '테일아머 선공 무효 & 격투 2배 저격',
+        types: ['노말', '에스퍼'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/981.png',
+        nature: '조심 (Modest, 특공↑/공격↓)',
+        evSummary: 'HP 252 / 특공 252 / 방어 4',
+        heldItem: '자뭉열매',
+        keyMoves: ['트윈빔', '하이퍼보이스', '섀도볼', '트릭룸'],
+        synergyReason: '특성 테일아머로 상대 선공기 무효화 및 에스퍼로 격투 2배 분쇄'
+      },
+      {
+        pokemonId: 474,
+        nameKo: '폴리곤Z (Porygon-Z)',
+        role: '적응력 2.0배 파괴광선 특수포',
+        types: ['노말'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/474.png',
+        nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+        evSummary: '특공 252 / 스피드 252 / HP 4',
+        heldItem: '구애스카프',
+        keyMoves: ['파괴광선', '트라이어택', '10만볼트', '냉동빔'],
+        synergyReason: '적응력 보정을 받는 실질 위력 300 파괴광선으로 보스 원킬'
+      },
+      {
+        pokemonId: 133,
+        nameKo: '이브이 (Eevee)',
+        role: '적응력 진화의휘석 마스코트',
+        types: ['노말'],
+        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png',
+        nature: '고집 (Adamant, 공격↑/특공↓)',
+        evSummary: '공격 252 / 스피드 252 / HP 4',
+        heldItem: '진화의휘석',
+        keyMoves: ['이판사판태클', '전광석화', '깨물어부수기', '하품'],
+        synergyReason: '적응력 보정 전광석화 선공기와 하품으로 안전한 기점 확보'
       }
     ]
   },
@@ -731,31 +1451,6 @@ export const MONOTYPE_GUIDES: Partial<Record<PokemonType, MonotypeGuide>> = {
   }
 };
 
-// Fallback generator for remaining types
 export function getMonotypeParty(type: PokemonType): MonotypeGuide {
-  if (MONOTYPE_GUIDES[type]) {
-    return MONOTYPE_GUIDES[type];
-  }
-
-  // Generic generator for other types
-  return {
-    type,
-    title: `${type} 타입 통일 챌린지 파티`,
-    concept: `${type} 타입 포켓몬만으로 파티를 구성하여 체육관 관장처럼 스토리 챔피언에 도전하는 로망 챌린지!`,
-    weaknessStrategy: `${type} 타입의 공통 약점을 상쇄할 수 있는 이중 타입(듀얼 타입) 포켓몬을 전위에 배치하여 방어 사이클을 돌리는 것이 핵심입니다.`,
-    members: [
-      {
-        pokemonId: 1,
-        nameKo: `${type} 타입 에이스`,
-        role: '파티의 메인 어태커',
-        types: [type],
-        spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
-        nature: '고집 (Adamant) 또는 조심 (Modest)',
-        evSummary: '공격/특공 252 / 스피드 252 / HP 4',
-        heldItem: '생명의구슬',
-        keyMoves: ['자속 주력기', '자속 서브기', '약점 견제기', '랭업기'],
-        synergyReason: `${type} 타입의 높은 화력으로 적을 쓰러뜨리는 주력 스위퍼`
-      }
-    ]
-  };
+  return MONOTYPE_GUIDES[type];
 }
