@@ -7,9 +7,10 @@ import { FilterBar } from './components/FilterBar';
 import { PokemonCard } from './components/PokemonCard';
 import { DetailModal } from './components/DetailModal';
 import { PartyModal } from './components/PartyModal';
+import { GymBattleModal } from './components/GymBattleModal';
 import { PwaInstallPrompt } from './components/PwaInstallPrompt';
 import { generateDynamicClearGuide } from './utils/guideGenerator';
-import { Sparkles, Compass, ChevronDown } from 'lucide-react';
+import { Sparkles, Compass, ChevronDown, Swords } from 'lucide-react';
 
 const allPokemonList = allPokemonData as unknown as BasicPokemon[];
 const curatedGuidesMap = new Map<number, PokemonClearGuide>();
@@ -31,6 +32,7 @@ export const App: React.FC = () => {
   const [selectedGuide, setSelectedGuide] = useState<PokemonClearGuide | null>(null);
   const [isGuideLoading, setIsGuideLoading] = useState(false);
   const [isPartyModalOpen, setIsPartyModalOpen] = useState(false);
+  const [isBattleModalOpen, setIsBattleModalOpen] = useState(false);
   const [partyProtagonist, setPartyProtagonist] = useState<BasicPokemon | null>(null);
 
   // Filtered Pokémon
@@ -104,7 +106,10 @@ export const App: React.FC = () => {
       <PwaInstallPrompt />
 
       {/* Navbar */}
-      <Navbar onOpenPartyModal={() => setIsPartyModalOpen(true)} />
+      <Navbar
+        onOpenPartyModal={() => setIsPartyModalOpen(true)}
+        onOpenBattleModal={() => setIsBattleModalOpen(true)}
+      />
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
@@ -255,6 +260,31 @@ export const App: React.FC = () => {
         onClose={() => setIsPartyModalOpen(false)}
         allPokemon={allPokemonList}
         initialPokemon={partyProtagonist}
+      />
+
+      {/* Gym Leader Battle Simulator Modal */}
+      <GymBattleModal
+        isOpen={isBattleModalOpen}
+        onClose={() => setIsBattleModalOpen(false)}
+        myParty={
+          partyProtagonist
+            ? [
+                partyProtagonist,
+                allPokemonList.find((p) => p.id === 130) || allPokemonList[0],
+                allPokemonList.find((p) => p.id === 94) || allPokemonList[1],
+                allPokemonList.find((p) => p.id === 143) || allPokemonList[2],
+                allPokemonList.find((p) => p.id === 212) || allPokemonList[3],
+                allPokemonList.find((p) => p.id === 445) || allPokemonList[4],
+              ]
+            : [
+                allPokemonList.find((p) => p.id === 170) || allPokemonList[0], // 초라기
+                allPokemonList.find((p) => p.id === 130) || allPokemonList[1], // 갸라도스
+                allPokemonList.find((p) => p.id === 94) || allPokemonList[2],  // 팬텀
+                allPokemonList.find((p) => p.id === 143) || allPokemonList[3], // 잠만보
+                allPokemonList.find((p) => p.id === 212) || allPokemonList[4], // 핫삼
+                allPokemonList.find((p) => p.id === 445) || allPokemonList[5], // 한카리아스
+              ]
+        }
       />
     </div>
   );

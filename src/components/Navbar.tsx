@@ -1,11 +1,12 @@
 import React from 'react';
-import { ShieldAlert, Users, Sparkles } from 'lucide-react';
+import { ShieldAlert, Users, Sparkles, Swords } from 'lucide-react';
 
 interface NavbarProps {
   onOpenPartyModal: () => void;
+  onOpenBattleModal: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal, onOpenBattleModal }) => {
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -32,7 +33,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex items-center space-x-2 sm:space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-2.5">
+          {/* Gym Leader Battle Simulator */}
+          <button
+            onClick={onOpenBattleModal}
+            className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-red-600/20 transition-all hover:scale-105"
+            title="시리즈별 체육관 관장 배틀 시뮬레이터 (입국 제한 체크)"
+          >
+            <Swords className="w-4 h-4 text-white" />
+            <span className="hidden sm:inline">관장</span>
+            <span>배틀 챌린지</span>
+          </button>
+
           <a
             href="./포켓몬_세대별_미입국_도감.xlsx"
             download="포켓몬_세대별_미입국_도감.xlsx"
@@ -40,16 +52,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal }) => {
             title="세대별 미입국 포켓몬 정리 엑셀 다운로드"
           >
             <span className="text-base">📊</span>
-            <span className="hidden md:inline">미입국 정리</span>
-            <span>엑셀 다운로드</span>
+            <span className="hidden md:inline">미입국</span>
+            <span>엑셀</span>
           </a>
 
           <button
             onClick={onOpenPartyModal}
-            className="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium text-sm shadow-md shadow-indigo-600/20 transition-all hover:scale-105"
+            className="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium text-xs sm:text-sm shadow-md shadow-indigo-600/20 transition-all hover:scale-105"
           >
             <Users className="w-4 h-4" />
-            <span className="hidden sm:inline">스토리 추천</span>
+            <span className="hidden sm:inline">스토리</span>
             <span>파티 엔트리</span>
           </button>
         </div>
