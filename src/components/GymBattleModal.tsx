@@ -3,6 +3,8 @@ import { BasicPokemon } from '../types/pokemon';
 import { GYM_LEADERS } from '../data/gymLeaders';
 import { GymLeader } from '../types/battle';
 import { validatePartyForGymLeader, calculateDamage, getTypeMultiplier } from '../utils/battleEngine';
+import { getOptimizedMoveset } from '../data/moveDatabase';
+import { TYPE_COLORS } from '../utils/colors';
 import { Swords, ShieldAlert, Award, X, Play, RotateCcw } from 'lucide-react';
 
 interface GymBattleModalProps {
@@ -291,42 +293,43 @@ export const GymBattleModal: React.FC<GymBattleModalProps> = ({ isOpen, onClose,
                 </div>
               </div>
 
-              {/* Action Move Buttons */}
-              {battleState === 'battling' && (
-                <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
-                  <span className="text-xs font-bold text-slate-300">기술을 선택하세요:</span>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                    <button
-                      onClick={() => handleAttack('10만볼트', 90, '전기')}
-                      className="p-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-200 text-xs font-bold text-left transition active:scale-95"
-                    >
-                      <span>⚡ 10만볼트</span>
-                      <span className="block text-[10px] text-slate-400 font-normal">위력 90 | 전기</span>
-                    </button>
-                    <button
-                      onClick={() => handleAttack('하이드로펌프', 110, '물')}
-                      className="p-3 rounded-xl bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/40 text-blue-200 text-xs font-bold text-left transition active:scale-95"
-                    >
-                      <span>🌊 하이드로펌프</span>
-                      <span className="block text-[10px] text-slate-400 font-normal">위력 110 | 물</span>
-                    </button>
-                    <button
-                      onClick={() => handleAttack('냉동빔', 90, '얼음')}
-                      className="p-3 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-cyan-200 text-xs font-bold text-left transition active:scale-95"
-                    >
-                      <span>❄️ 냉동빔</span>
-                      <span className="block text-[10px] text-slate-400 font-normal">위력 90 | 얼음</span>
-                    </button>
-                    <button
-                      onClick={() => handleAttack('볼트체인지', 70, '전기')}
-                      className="p-3 rounded-xl bg-yellow-500/20 hover:bg-yellow-500/30 border border-yellow-500/40 text-yellow-200 text-xs font-bold text-left transition active:scale-95"
-                    >
-                      <span>🔄 볼트체인지</span>
-                      <span className="block text-[10px] text-slate-400 font-normal">위력 70 | 전기</span>
-                    </button>
+              {/* Action Move Buttons (현재 내 출전 포켓몬의 타입에 맞는 실제 기술 4개 매칭) */}
+              {battleState === 'battling' && (() => {
+                const activeMon = myParty[myCurrentIndex] || { nameKo: '초라기', types: ['물', '전기'] };
+                const currentMoves = getOptimizedMoveset(activeMon.types as any, false);
+
+                return (
+                  <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-2">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="font-bold text-slate-200">
+                        [{activeMon.nameKo}]의 기술을 선택하세요:
+                      </span>
+                      <span className="text-[11px] text-slate-400">
+                        타입: {activeMon.types.join('/')}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                      {currentMoves.map((m) => {
+                        const style = TYPE_COLORS[m.type] || TYPE_COLORS['노말'];
+                        return (
+                          <button
+                            key={m.nameKo}
+                            onClick={() => handleAttack(m.nameKo, m.power, m.type)}
+                            className={`p-3 rounded-xl border ${style.bg} ${style.border} text-left transition active:scale-95 hover:brightness-110 shadow-sm`}
+                          >
+                            <span className={`block font-bold text-xs ${style.text}`}>
+                              {m.nameKo}
+                            </span>
+                            <span className="block text-[10px] text-slate-300 font-normal mt-0.5">
+                              위력 {m.power > 0 ? m.power : '-'} | {m.type}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              )}
+                );
+              })()}
 
               {/* Logs Console */}
               <div className="p-4 rounded-2xl bg-black/50 border border-slate-800 h-40 overflow-y-auto space-y-1 text-xs font-mono">

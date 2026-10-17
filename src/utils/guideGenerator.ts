@@ -1,5 +1,6 @@
 import { PokemonClearGuide, PokemonType, MoveSlot } from '../types/pokemon';
 import { BasicPokemon } from '../types/pokemon';
+import { getOptimizedMoveset } from '../data/moveDatabase';
 
 const typeMapKo: Record<string, PokemonType> = {
   normal: '노말', fighting: '격투', flying: '비행', poison: '독',
@@ -66,40 +67,17 @@ export async function generateDynamicClearGuide(basic: BasicPokemon): Promise<Po
       ? `공격 252 / ${isFast ? '스피드' : 'HP'} 252 / ${isFast ? 'HP' : '방어'} 4 (물리 극딜 세팅)`
       : `특수공격 252 / ${isFast ? '스피드' : 'HP'} 252 / ${isFast ? 'HP' : '방어'} 4 (특수 극딜 세팅)`;
 
-    // Moveset (4 Slots)
-    const primaryType = basic.types[0] || '노말';
-    const secondaryType = basic.types[1];
-
-    const moveset: MoveSlot[] = [
-      {
-        slot: 1,
-        nameKo: `${primaryType} 자속 주력기`,
-        type: primaryType,
-        category: isPhysical ? '물리' : '특수',
-        reason: `${primaryType} 타입의 1.5배 자속 보정을 받는 메인 공격 기술`
-      },
-      {
-        slot: 2,
-        nameKo: secondaryType ? `${secondaryType} 자속 보조기` : (isPhysical ? '은혜갚기/이판사판태클' : '파괴광선/하이퍼보이스'),
-        type: secondaryType || '노말',
-        category: isPhysical ? '물리' : '특수',
-        reason: secondaryType ? `${secondaryType} 타입의 추가 자속 타점 확보` : '안정적인 고위력 보조기'
-      },
-      {
-        slot: 3,
-        nameKo: '약점 견제 서브웨폰 (냉동빔 / 지진 / 스톤샤워 등)',
-        type: isPhysical ? '땅' : '얼음',
-        category: isPhysical ? '물리' : '특수',
-        reason: '상성상 불리한 적을 역으로 2배 타격할 수 있는 필수 서브 견제기'
-      },
-      {
-        slot: 4,
-        nameKo: isPhysical ? '칼춤 / 용의춤 (또는 유턴)' : '나쁜음모 / 명상 (또는 볼트체인지)',
-        type: '노말',
-        category: '변화',
-        reason: '보스전 및 체육관 관장전에서 화력을 2배 뻥튀기하는 랭크업 또는 유틸기'
-      }
-    ];
+    // Moveset (4 Slots) - 실전 대표 기술 정확 매칭
+    const optimizedMoves = getOptimizedMoveset(basic.types, isPhysical);
+    const moveset: MoveSlot[] = optimizedMoves.map((m, idx) => ({
+      slot: idx + 1,
+      nameKo: m.nameKo,
+      type: m.type,
+      category: m.category,
+      power: m.power,
+      accuracy: m.accuracy,
+      reason: m.description,
+    }));
 
     const difficulty = (attack + spAttack + hp) > 280 ? '쉬움' : (attack + spAttack + hp) > 200 ? '보통' : '어려움';
 
