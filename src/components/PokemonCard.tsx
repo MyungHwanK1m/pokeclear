@@ -75,11 +75,11 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSele
         </div>
 
         {/* Admitted Games Badges (입국 여부 표시) */}
-        <div className="flex items-center gap-1 mt-2.5">
+        <div className="flex flex-wrap items-center justify-center gap-1 mt-2.5">
           <span className="text-[10px] text-slate-500 mr-0.5">입국:</span>
           {pokemon.admittedGames?.includes('SV') ? (
             <span className="text-[9px] px-1.5 py-0.2 rounded bg-purple-950 text-purple-300 border border-purple-800 font-semibold" title="9세대 스칼렛/바이올렛 입국">
-              9세대(SV)
+              SV
             </span>
           ) : (
             <span className="text-[9px] px-1 py-0.2 rounded bg-slate-950 text-slate-600 line-through">
@@ -87,9 +87,15 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSele
             </span>
           )}
 
+          {pokemon.admittedGames?.includes('ZA') && (
+            <span className="text-[9px] px-1.5 py-0.2 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 font-bold" title="레전드 Z-A (미르 도감) 수록">
+              Z-A
+            </span>
+          )}
+
           {pokemon.admittedGames?.includes('SwSh') ? (
             <span className="text-[9px] px-1.5 py-0.2 rounded bg-blue-950 text-blue-300 border border-blue-800 font-semibold" title="8세대 소드/실드 입국">
-              8세대(SwSh)
+              SwSh
             </span>
           ) : (
             <span className="text-[9px] px-1 py-0.2 rounded bg-slate-950 text-slate-600 line-through">
@@ -97,9 +103,9 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSele
             </span>
           )}
 
-          {pokemon.admittedGames?.includes('BDSP') && (
-            <span className="text-[9px] px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-semibold" title="4세대 리메이크 BDSP 입국">
-              BDSP
+          {pokemon.admittedGames?.includes('PLA') && (
+            <span className="text-[9px] px-1.5 py-0.2 rounded bg-teal-950 text-teal-300 border border-teal-800 font-semibold" title="레전드 아르세우스(PLA) 수록">
+              PLA
             </span>
           )}
         </div>
