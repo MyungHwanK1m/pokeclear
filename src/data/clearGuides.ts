@@ -46,7 +46,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '특수',
           power: 80,
           accuracy: 100,
-          reason: '30% 화상 확률로 상대 물리 공격력을 반토막내거나 안정적인 90 위력 메인 웨폰'
+          reason: '30% 화상 확률로 상대 물리 공격력을 반토막내거나 안정적인 90 위력 메인 웨폰',
+          generationNotice: '⚠️ 9세대(SV) 기술머신 삭제: 9세대 플레이 시 "파도타기" 또는 "하이드로펌프" 사용 필수 (5~8세대는 열탕 강력 추천)'
         },
         {
           slot: 2,
@@ -55,7 +56,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '특수',
           power: 90,
           accuracy: 100,
-          reason: '자속 주력기. 방전 채용 시 30% 마비로 상대 턴 무력화 노림'
+          reason: '자속 주력기. 방전 채용 시 30% 마비로 상대 턴 무력화 노림',
+          generationNotice: '전 세대에서 기술머신 또는 자력기로 안정적 습득 가능'
         },
         {
           slot: 3,
@@ -64,7 +66,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '특수',
           power: 90,
           accuracy: 100,
-          reason: '초라기의 양대 약점인 [풀]과 [땅], 드래곤을 찌르는 절대 필수 서브웨폰'
+          reason: '초라기의 양대 약점인 [풀]과 [땅], 드래곤을 찌르는 절대 필수 서브웨폰',
+          generationNotice: '1~9세대 전 시리즈 기술머신으로 습득 가능 (상대 땅/풀 카운터 핵심)'
         },
         {
           slot: 4,
@@ -73,7 +76,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '변화',
           power: '-',
           accuracy: '-',
-          reason: '물 기술 위력 1.5배 폭증 + 번개 필중 버프, 또는 전자기파로 선공권 장악'
+          reason: '물 기술 위력 1.5배 폭증 + 번개 필중 버프, 또는 전자기파로 선공권 장악',
+          generationNotice: '전자기파는 7세대부터 명중률이 100% → 90%로 하향 패치됨 (구세대는 100% 명중)'
         }
       ]
     },
@@ -138,7 +142,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '특수',
           power: 90,
           accuracy: 100,
-          reason: '전기구슬 2배 보정을 받는 메인 폭딜기'
+          reason: '전기구슬 2배 보정을 받는 메인 폭딜기',
+          generationNotice: '볼트태클은 3세대 에메랄드부터 도입된 전기구슬 교배 전용기 (스토리 육성 시 10만볼트가 훨씬 간편)'
         },
         {
           slot: 2,
@@ -147,7 +152,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '특수',
           power: '가변',
           accuracy: 100,
-          reason: '전기 킬러인 무거운 땅/바위 포켓몬을 저격하는 핵심 비기'
+          reason: '전기 킬러인 무거운 땅/바위 포켓몬을 저격하는 핵심 비기',
+          generationNotice: '⚠️ 4세대(DPPt) 이후 도입된 기술 (3세대 이전 FRLG/RSE 플레이 시 "아이언테일" 또는 "파도타기 이벤트 피카츄"로 대체)'
         },
         {
           slot: 3,
@@ -156,7 +162,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '특수',
           power: 70,
           accuracy: 100,
-          reason: '불리한 상성을 만났을 때 딜을 넣고 안전하게 동료로 교체'
+          reason: '불리한 상성을 만났을 때 딜을 넣고 안전하게 동료로 교체',
+          generationNotice: '⚠️ 5세대(BW) 이후 도입된 기술 (4세대 이전에는 "전격파"나 "방전" 활용)'
         },
         {
           slot: 4,
@@ -165,7 +172,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: 40,
           accuracy: 100,
-          reason: '딸피 마무리용 선공기 또는 턴 벌었을 때 특공 2랭크 뻥튀기'
+          reason: '딸피 마무리용 선공기 또는 턴 벌었을 때 특공 2랭크 뻥튀기',
+          generationNotice: '나쁜음모는 4세대 피츄 진화 시 자력기, 8·9세대에서는 기술머신으로 전수 가능'
         }
       ]
     },
@@ -225,7 +233,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: '레벨 비례',
           accuracy: 100,
-          reason: '공격/특공 스탯에 구애받지 않고 무조건 레벨 수치만큼 고정 데미지(Lv.60이면 60딜)'
+          reason: '공격/특공 스탯에 구애받지 않고 무조건 레벨 수치만큼 고정 데미지(Lv.60이면 60딜)',
+          generationNotice: '⚠️ 3세대 가르침기술 / 유전기 (최신 세대에서 유전이 어려울 경우 "섀도볼"이나 "차지빔"으로 대체 가능)'
         },
         {
           slot: 2,
@@ -234,7 +243,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '변화',
           power: '-',
           accuracy: '-',
-          reason: '최대 체력의 50%를 즉시 회복하는 불사신 스킬'
+          reason: '최대 체력의 50%를 즉시 회복하는 불사신 스킬',
+          generationNotice: '⚠️ 9세대(SV) 밸런스 패치: 회복기 PP가 10에서 5로 대폭 너프됨 (PP에이더 관리 필요)'
         },
         {
           slot: 3,
@@ -243,7 +253,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '변화',
           power: '-',
           accuracy: 90,
-          reason: '시간이 갈수록 데미지가 폭증하는 맹독으로 보스전을 말려 죽임'
+          reason: '시간이 갈수록 데미지가 폭증하는 맹독으로 보스전을 말려 죽임',
+          generationNotice: '⚠️ 8·9세대 맹독 TM 전면 삭제 패치: 8·9세대에서는 맹독 습득 불가! 최신작에서는 반드시 "전기자석파" 또는 "스텔스록" 사용'
         },
         {
           slot: 4,
@@ -252,7 +263,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '변화',
           power: '-',
           accuracy: '-',
-          reason: '회피율 2랭크 상승. 3번 쓰면 상대 기술 명중률이 33% 이하로 떡락'
+          reason: '회피율 2랭크 상승. 3번 쓰면 상대 기술 명중률이 33% 이하로 떡락',
+          generationNotice: '1~9세대 전 시리즈 자력기로 습득 가능'
         }
       ]
     },
@@ -312,7 +324,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: 120,
           accuracy: 100,
-          reason: '적응력 2배 보정 시 실질 위력 240에 달하는 이브이 궁극의 일격'
+          reason: '적응력 2배 보정 시 실질 위력 240에 달하는 이브이 궁극의 일격',
+          generationNotice: '⚠️ 8·9세대 은혜갚기 완전 삭제됨: 8·9세대 플레이 시 "이판사판태클"(자력기) 또는 "돌진"을 메인기로 사용해야 함'
         },
         {
           slot: 2,
@@ -321,7 +334,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: 40,
           accuracy: 100,
-          reason: '적응력 보정을 받는 강력한 자속 선공기 (위력 80급 체감)'
+          reason: '적응력 보정을 받는 강력한 자속 선공기 (위력 80급 체감)',
+          generationNotice: '전 세대 공통 자력기 (딸피 마무리용 완소기)'
         },
         {
           slot: 3,
@@ -330,7 +344,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: 60,
           accuracy: 100,
-          reason: '노말 기술이 통하지 않는 고스트 타입을 타격하는 견제기'
+          reason: '노말 기술이 통하지 않는 고스트 타입을 타격하는 견제기',
+          generationNotice: '깨물어부수기는 8세대(소실)부터 레코드/기술머신으로 전수 가능'
         },
         {
           slot: 4,
@@ -339,7 +354,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '변화',
           power: '-',
           accuracy: '-',
-          reason: '다음 턴 상대를 잠재우거나 명중률을 깎아 딜각 확보'
+          reason: '다음 턴 상대를 잠재우거나 명중률을 깎아 딜각 확보',
+          generationNotice: '하품은 3세대부터 자력 습득 가능'
         }
       ]
     },
@@ -399,7 +415,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: '체력 반비례 (최대 200)',
           accuracy: 100,
-          reason: '기합의띠로 HP 1이 남았을 때 최대 위력 200의 필살기로 변모'
+          reason: '기합의띠로 HP 1이 남았을 때 최대 위력 200의 필살기로 변모',
+          generationNotice: '레벨 30에 자력 습득. 2세대부터 전 세대 공통 생명줄 기술'
         },
         {
           slot: 2,
@@ -408,7 +425,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: 40,
           accuracy: 100,
-          reason: '바둥바둥을 배우기 전까지 써야 하는 눈물의 기본기'
+          reason: '바둥바둥을 배우기 전까지 써야 하는 눈물의 기본기',
+          generationNotice: '레벨 15에 자력 습득. 5세대부터 위력이 35에서 50, 7세대에서 40으로 조정됨'
         },
         {
           slot: 3,
@@ -417,7 +435,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '물리',
           power: 85,
           accuracy: 85,
-          reason: '1턴 공중에 숨었다가 내려찍으며 30% 마비를 노리는 유일한 서브웨폰'
+          reason: '1턴 공중에 숨었다가 내려찍으며 30% 마비를 노리는 유일한 서브웨폰',
+          generationNotice: '⚠️ 4세대(Pt)/8세대(SwSh) 기술가르침/레코드로 습득 가능 (9세대 SV에서는 잉어킹이 기술머신으로 습득 불가하므로 바둥바둥에 올인)'
         },
         {
           slot: 4,
@@ -426,7 +445,8 @@ export const POKEMON_CLEAR_GUIDES: PokemonClearGuide[] = [
           category: '변화',
           power: '-',
           accuracy: '-',
-          reason: '아무 일도 일어나지 않는 상징 기술 (Z기술 사용 시 공격 3랭크 상승)'
+          reason: '아무 일도 일어나지 않는 상징 기술 (Z기술 사용 시 공격 3랭크 상승)',
+          generationNotice: '7세대 썬문에서 "Z튀어오르기"를 쓰면 공격력이 3랭크(2.5배) 폭등하는 전설의 비기 존재'
         }
       ]
     },

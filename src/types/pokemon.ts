@@ -23,6 +23,8 @@ export interface MoveSlot {
   power?: number | string;
   accuracy?: number | string;
   reason: string;
+  generationNotice?: string; // 세대별 삭제/패치 주의사항
+  alternativeMove?: string;  // 최신 세대 대체 기술
 }
 
 export interface EVSpread {

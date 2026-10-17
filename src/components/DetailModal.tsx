@@ -164,10 +164,15 @@ export const DetailModal: React.FC<DetailModalProps> = ({ guide, isLoading, onCl
 
             {/* 4 Moveset Slots (스토리 불도저 기술배치 4선) */}
             <div>
-              <h4 className="text-sm font-bold text-slate-300 uppercase tracking-wider mb-3 flex items-center gap-2">
-                <Swords className="w-4 h-4 text-blue-400" />
-                스토리 클리어 기술 배치 (4슬롯)
-              </h4>
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+                  <Swords className="w-4 h-4 text-blue-400" />
+                  스토리 클리어 기술 배치 (4슬롯)
+                </h4>
+                <span className="text-[10px] text-amber-400/90 font-medium px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20">
+                  ⚙️ 세대별 삭제/너프 패치 자동 체크됨
+                </span>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {guide.recommendedSetup.moveset.map((move) => {
                   const typeStyle = TYPE_COLORS[move.type] || TYPE_COLORS['노말'];
@@ -190,6 +195,11 @@ export const DetailModal: React.FC<DetailModalProps> = ({ guide, isLoading, onCl
                       <div className="mt-2.5 pt-2 border-t border-slate-800/80 text-xs text-slate-400 leading-relaxed">
                         💬 {move.reason}
                       </div>
+                      {move.generationNotice && (
+                        <div className="mt-2.5 p-2 rounded-lg bg-amber-950/40 border border-amber-700/40 text-[11px] text-amber-300/90 leading-relaxed">
+                          {move.generationNotice}
+                        </div>
+                      )}
                     </div>
                   );
                 })}
