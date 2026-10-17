@@ -1,40 +1,91 @@
 import React, { useState, useMemo } from 'react';
+import allPokemonData from './data/allPokemon.json';
 import { POKEMON_CLEAR_GUIDES } from './data/clearGuides';
-import { PokemonClearGuide } from './types/pokemon';
+import { BasicPokemon, PokemonClearGuide, PokemonType } from './types/pokemon';
 import { Navbar } from './components/Navbar';
 import { FilterBar } from './components/FilterBar';
 import { PokemonCard } from './components/PokemonCard';
 import { DetailModal } from './components/DetailModal';
 import { PartyModal } from './components/PartyModal';
-import { Sparkles, Compass } from 'lucide-react';
+import { generateDynamicClearGuide } from './utils/guideGenerator';
+import { Sparkles, Compass, ChevronDown } from 'lucide-react';
+
+const allPokemonList = allPokemonData as unknown as BasicPokemon[];
+const curatedGuidesMap = new Map<number, PokemonClearGuide>();
+POKEMON_CLEAR_GUIDES.forEach((guide) => {
+  curatedGuidesMap.set(guide.id, guide);
+});
+
+const PAGE_SIZE = 48;
 
 export const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedDifficulty, setSelectedDifficulty] = useState('전체');
-  const [unevolvedOnly, setUnevolvedOnly] = useState(false);
+  const [selectedGeneration, setSelectedGeneration] = useState<number | 'all'>('all');
+  const [selectedType, setSelectedType] = useState<PokemonType | 'all'>('all');
+  const [curatedOnly, setCuratedOnly] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
   const [selectedGuide, setSelectedGuide] = useState<PokemonClearGuide | null>(null);
+  const [isGuideLoading, setIsGuideLoading] = useState(false);
   const [isPartyModalOpen, setIsPartyModalOpen] = useState(false);
 
-  // Filtered Pokémon Guides
-  const filteredGuides = useMemo(() => {
-    return POKEMON_CLEAR_GUIDES.filter((guide) => {
+  // Filtered Pokémon
+  const filteredList = useMemo(() => {
+    return allPokemonList.filter((pokemon) => {
+      // Search
+      const search = searchTerm.trim().toLowerCase();
       const matchSearch =
-        guide.nameKo.includes(searchTerm) ||
-        guide.nameEn.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        String(guide.id) === searchTerm;
+        !search ||
+        pokemon.nameKo.includes(search) ||
+        pokemon.nameEn.toLowerCase().includes(search) ||
+        String(pokemon.id) === search;
 
-      const matchDifficulty =
-        selectedDifficulty === '전체' || guide.difficulty === selectedDifficulty;
+      // Generation
+      const matchGen =
+        selectedGeneration === 'all' || pokemon.generation === selectedGeneration;
 
-      const matchUnevolved = !unevolvedOnly || guide.isUnevolvedRun;
+      // Type
+      const matchType =
+        selectedType === 'all' || pokemon.types.includes(selectedType);
 
-      return matchSearch && matchDifficulty && matchUnevolved;
+      // Curated Special Guides
+      const matchCurated = !curatedOnly || curatedGuidesMap.has(pokemon.id);
+
+      return matchSearch && matchGen && matchType && matchCurated;
     });
-  }, [searchTerm, selectedDifficulty, unevolvedOnly]);
+  }, [searchTerm, selectedGeneration, selectedType, curatedOnly]);
+
+  const displayedList = useMemo(() => {
+    return filteredList.slice(0, visibleCount);
+  }, [filteredList, visibleCount]);
+
+  const handleSelectPokemon = async (pokemon: BasicPokemon, guide?: PokemonClearGuide) => {
+    if (guide) {
+      setSelectedGuide(guide);
+      return;
+    }
+
+    if (curatedGuidesMap.has(pokemon.id)) {
+      setSelectedGuide(curatedGuidesMap.get(pokemon.id)!);
+      return;
+    }
+
+    // Dynamic generation from PokéAPI
+    setIsGuideLoading(true);
+    setSelectedGuide(null);
+    try {
+      const generated = await generateDynamicClearGuide(pokemon);
+      setSelectedGuide(generated);
+    } catch (e) {
+      console.error('Failed to generate clear guide:', e);
+    } finally {
+      setIsGuideLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100">
-      {/* Top Navigation */}
+      {/* Navbar */}
       <Navbar onOpenPartyModal={() => setIsPartyModalOpen(true)} />
 
       {/* Main Content Area */}
@@ -44,17 +95,17 @@ export const App: React.FC = () => {
           <div className="relative z-10 max-w-2xl space-y-3">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>포켓몬 본가 스토리 공략 전용 도감</span>
+              <span>전국도감 1~9세대 1025마리 전종 지원</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-              최애 포켓몬과 미진화체로 <br className="hidden sm:inline" />
+              어떤 포켓몬으로도 <br className="hidden sm:inline" />
               <span className="bg-gradient-to-r from-red-400 via-amber-300 to-emerald-400 bg-clip-text text-transparent">
-                챔피언 엔딩을 정복하세요!
+                본가 스토리 엔딩을 공략하세요!
               </span>
             </h1>
             <p className="text-sm text-slate-300 leading-relaxed">
-              실전 랭크배틀이 아닌, 오직 <strong>본가 스토리 클리어</strong>에 특화된 성격, 
-              노력치, 4슬롯 기술배치 및 파티 시너지 엔트리를 제공합니다.
+              초라기·피카츄 등 특수 챌린지 전용 가이드부터, 전국도감 1025마리 전 포켓몬의 
+              <strong>성격, 노력치, 4슬롯 추천 기술배치, 지닌물건</strong>을 즉시 확인할 수 있습니다.
             </p>
           </div>
         </section>
@@ -62,29 +113,62 @@ export const App: React.FC = () => {
         {/* Filter and Search Bar */}
         <FilterBar
           searchTerm={searchTerm}
-          onSearchChange={setSearchTerm}
-          selectedDifficulty={selectedDifficulty}
-          onDifficultyChange={setSelectedDifficulty}
-          unevolvedOnly={unevolvedOnly}
-          onUnevolvedOnlyToggle={() => setUnevolvedOnly((prev) => !prev)}
-          totalCount={filteredGuides.length}
+          onSearchChange={(val) => {
+            setSearchTerm(val);
+            setVisibleCount(PAGE_SIZE);
+          }}
+          selectedGeneration={selectedGeneration}
+          onGenerationChange={(gen) => {
+            setSelectedGeneration(gen);
+            setVisibleCount(PAGE_SIZE);
+          }}
+          selectedType={selectedType}
+          onTypeChange={(type) => {
+            setSelectedType(type);
+            setVisibleCount(PAGE_SIZE);
+          }}
+          curatedOnly={curatedOnly}
+          onCuratedOnlyToggle={() => {
+            setCuratedOnly((prev) => !prev);
+            setVisibleCount(PAGE_SIZE);
+          }}
+          totalCount={filteredList.length}
         />
 
         {/* Card Grid */}
-        {filteredGuides.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredGuides.map((guide) => (
-              <PokemonCard
-                key={guide.id}
-                guide={guide}
-                onSelect={(selected) => setSelectedGuide(selected)}
-              />
-            ))}
-          </div>
+        {displayedList.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+              {displayedList.map((pokemon) => {
+                const guide = curatedGuidesMap.get(pokemon.id);
+                return (
+                  <PokemonCard
+                    key={pokemon.id}
+                    pokemon={pokemon}
+                    guide={guide}
+                    onSelect={handleSelectPokemon}
+                  />
+                );
+              })}
+            </div>
+
+            {/* Load More Button */}
+            {visibleCount < filteredList.length && (
+              <div className="flex justify-center pt-6 pb-2">
+                <button
+                  onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
+                  className="flex items-center space-x-2 px-6 py-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-red-500/50 hover:bg-slate-800 text-sm font-bold text-slate-200 transition-all shadow-lg hover:scale-105"
+                >
+                  <ChevronDown className="w-4 h-4 text-red-400" />
+                  <span>포켓몬 더 보기 ({visibleCount} / {filteredList.length})</span>
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-slate-800/80">
             <Compass className="w-12 h-12 text-slate-600 mx-auto mb-3 animate-spin" style={{ animationDuration: '6s' }} />
-            <h3 className="text-base font-bold text-slate-400">일치하는 포켓몬 가이드가 없습니다</h3>
+            <h3 className="text-base font-bold text-slate-400">일치하는 포켓몬이 없습니다</h3>
             <p className="text-xs text-slate-500 mt-1">다른 검색어 또는 필터 옵션을 선택해 보세요.</p>
           </div>
         )}
@@ -92,7 +176,7 @@ export const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
-        <p>PokeClear • 본가 포켓몬 스토리 클리어 도감 & 챌린지 엔트리 빌더</p>
+        <p>PokeClear • 전국도감 1~1025 본가 스토리 클리어 가이드</p>
         <p className="mt-1 text-[11px] text-slate-600">
           모든 포켓몬스터 관련 이미지와 저작권은 Nintendo, Creatures Inc., GAME FREAK inc.에 있습니다.
         </p>
@@ -101,7 +185,11 @@ export const App: React.FC = () => {
       {/* Modals */}
       <DetailModal
         guide={selectedGuide}
-        onClose={() => setSelectedGuide(null)}
+        isLoading={isGuideLoading}
+        onClose={() => {
+          setSelectedGuide(null);
+          setIsGuideLoading(false);
+        }}
       />
 
       <PartyModal

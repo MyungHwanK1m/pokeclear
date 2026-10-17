@@ -3,6 +3,16 @@ export type PokemonType =
   | '격투' | '독' | '땅' | '비행' | '에스퍼' | '벌레'
   | '바위' | '고스트' | '드래곤' | '악' | '강철' | '페어리';
 
+export interface BasicPokemon {
+  id: number;
+  nameKo: string;
+  nameEn: string;
+  generation: number;
+  artworkUrl: string;
+  spriteUrl: string;
+  types: PokemonType[];
+}
+
 export interface MoveSlot {
   slot: number;
   nameKo: string;
