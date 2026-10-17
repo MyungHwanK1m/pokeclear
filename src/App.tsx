@@ -22,6 +22,8 @@ export const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGeneration, setSelectedGeneration] = useState<number | 'all'>('all');
   const [selectedType, setSelectedType] = useState<PokemonType | 'all'>('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState('전체');
+  const [selectedGameAdmission, setSelectedGameAdmission] = useState('all');
   const [curatedOnly, setCuratedOnly] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
@@ -49,12 +51,23 @@ export const App: React.FC = () => {
       const matchType =
         selectedType === 'all' || pokemon.types.includes(selectedType);
 
+      // Clear Difficulty
+      const effectiveDifficulty =
+        curatedGuidesMap.get(pokemon.id)?.difficulty || pokemon.difficulty;
+      const matchDifficulty =
+        selectedDifficulty === '전체' || effectiveDifficulty === selectedDifficulty;
+
+      // Game Title Admission (입국 여부)
+      const matchAdmission =
+        selectedGameAdmission === 'all' ||
+        (pokemon.admittedGames && pokemon.admittedGames.includes(selectedGameAdmission as any));
+
       // Curated Special Guides
       const matchCurated = !curatedOnly || curatedGuidesMap.has(pokemon.id);
 
-      return matchSearch && matchGen && matchType && matchCurated;
+      return matchSearch && matchGen && matchType && matchDifficulty && matchAdmission && matchCurated;
     });
-  }, [searchTerm, selectedGeneration, selectedType, curatedOnly]);
+  }, [searchTerm, selectedGeneration, selectedType, selectedDifficulty, selectedGameAdmission, curatedOnly]);
 
   const displayedList = useMemo(() => {
     return filteredList.slice(0, visibleCount);
@@ -126,6 +139,16 @@ export const App: React.FC = () => {
           selectedType={selectedType}
           onTypeChange={(type) => {
             setSelectedType(type);
+            setVisibleCount(PAGE_SIZE);
+          }}
+          selectedDifficulty={selectedDifficulty}
+          onDifficultyChange={(diff) => {
+            setSelectedDifficulty(diff);
+            setVisibleCount(PAGE_SIZE);
+          }}
+          selectedGameAdmission={selectedGameAdmission}
+          onGameAdmissionChange={(game) => {
+            setSelectedGameAdmission(game);
             setVisibleCount(PAGE_SIZE);
           }}
           curatedOnly={curatedOnly}

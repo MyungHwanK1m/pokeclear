@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Sparkles, Filter } from 'lucide-react';
+import { Search, Sparkles, Filter, Gamepad2, Gauge } from 'lucide-react';
 import { PokemonType } from '../types/pokemon';
 
 interface FilterBarProps {
@@ -9,6 +9,10 @@ interface FilterBarProps {
   onGenerationChange: (gen: number | 'all') => void;
   selectedType: PokemonType | 'all';
   onTypeChange: (type: PokemonType | 'all') => void;
+  selectedDifficulty: string;
+  onDifficultyChange: (diff: string) => void;
+  selectedGameAdmission: string;
+  onGameAdmissionChange: (game: string) => void;
   curatedOnly: boolean;
   onCuratedOnlyToggle: () => void;
   totalCount: number;
@@ -27,6 +31,16 @@ const GENERATIONS = [
   { id: 9, label: '9세대 (팔데아)' },
 ];
 
+const GAME_ADMISSIONS = [
+  { id: 'all', label: '전체 (전국도감)' },
+  { id: 'SV', label: '9세대 스칼렛/바이올렛 입국' },
+  { id: 'SwSh', label: '8세대 소드/실드 입국' },
+  { id: 'BDSP', label: '4세대 리메이크(BDSP) 입국' },
+  { id: 'USUM', label: '7세대 이전 전원 입국' },
+];
+
+const DIFFICULTIES = ['전체', '쉬움', '보통', '어려움', '익스트림'];
+
 const POKEMON_TYPES: PokemonType[] = [
   '노말', '불꽃', '물', '풀', '전기', '얼음',
   '격투', '독', '땅', '비행', '에스퍼', '벌레',
@@ -40,6 +54,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   onGenerationChange,
   selectedType,
   onTypeChange,
+  selectedDifficulty,
+  onDifficultyChange,
+  selectedGameAdmission,
+  onGameAdmissionChange,
   curatedOnly,
   onCuratedOnlyToggle,
   totalCount,
@@ -73,14 +91,60 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </button>
       </div>
 
-      {/* Generation Tabs */}
-      <div className="space-y-1.5">
+      {/* Game Admission Filter (타이틀별 입국 여부 필터) */}
+      <div className="space-y-1.5 pt-1 border-t border-slate-800/60">
         <div className="flex items-center justify-between text-xs text-slate-400 font-medium">
-          <span>세대별 필터 (전국도감 1~1025)</span>
+          <span className="flex items-center gap-1.5 text-purple-400 font-bold">
+            <Gamepad2 className="w-3.5 h-3.5" />
+            게임 타이틀별 입국(등장) 필터
+          </span>
           <span className="font-mono text-slate-400">
             총 <strong className="text-red-400 font-bold">{totalCount}</strong>마리 표시 중
           </span>
         </div>
+        <div className="flex items-center space-x-1 overflow-x-auto pb-1 scrollbar-thin">
+          {GAME_ADMISSIONS.map((game) => (
+            <button
+              key={game.id}
+              onClick={() => onGameAdmissionChange(game.id)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all ${
+                selectedGameAdmission === game.id
+                  ? 'bg-purple-600 text-white font-bold shadow-md shadow-purple-600/20'
+                  : 'bg-slate-950/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-slate-800/80'
+              }`}
+            >
+              {game.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Clear Difficulty Filter (클리어 난이도 필터) */}
+      <div className="space-y-1.5 pt-1 border-t border-slate-800/60">
+        <div className="flex items-center space-x-1.5 text-xs text-amber-400 font-bold">
+          <Gauge className="w-3.5 h-3.5" />
+          <span>클리어 난이도 필터</span>
+        </div>
+        <div className="flex items-center space-x-1 overflow-x-auto pb-1">
+          {DIFFICULTIES.map((diff) => (
+            <button
+              key={diff}
+              onClick={() => onDifficultyChange(diff)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all ${
+                selectedDifficulty === diff
+                  ? 'bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/20'
+                  : 'bg-slate-950/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-slate-800/80'
+              }`}
+            >
+              {diff}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Generation Tabs */}
+      <div className="space-y-1.5 pt-1 border-t border-slate-800/60">
+        <div className="text-xs text-slate-400 font-medium">세대별 필터</div>
         <div className="flex items-center space-x-1 overflow-x-auto pb-1 scrollbar-thin">
           {GENERATIONS.map((gen) => (
             <button

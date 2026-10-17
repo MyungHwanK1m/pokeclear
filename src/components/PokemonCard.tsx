@@ -10,6 +10,8 @@ interface PokemonCardProps {
 }
 
 export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSelect }) => {
+  const currentDifficulty = guide ? guide.difficulty : pokemon.difficulty;
+
   return (
     <div
       onClick={() => onSelect(pokemon, guide)}
@@ -33,11 +35,9 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSele
               진화 금지
             </span>
           )}
-          {guide && (
-            <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full border ${DIFFICULTY_BADGES[guide.difficulty]}`}>
-              {guide.difficulty}
-            </span>
-          )}
+          <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full border ${DIFFICULTY_BADGES[currentDifficulty]}`}>
+            {currentDifficulty}
+          </span>
         </div>
       </div>
 
@@ -50,7 +50,6 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSele
             className="w-24 h-24 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300"
             loading="lazy"
             onError={(e) => {
-              // fallback to sprite if artwork 404
               (e.target as HTMLImageElement).src = pokemon.spriteUrl;
             }}
           />
@@ -74,6 +73,36 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSele
             );
           })}
         </div>
+
+        {/* Admitted Games Badges (입국 여부 표시) */}
+        <div className="flex items-center gap-1 mt-2.5">
+          <span className="text-[10px] text-slate-500 mr-0.5">입국:</span>
+          {pokemon.admittedGames?.includes('SV') ? (
+            <span className="text-[9px] px-1.5 py-0.2 rounded bg-purple-950 text-purple-300 border border-purple-800 font-semibold" title="9세대 스칼렛/바이올렛 입국">
+              9세대(SV)
+            </span>
+          ) : (
+            <span className="text-[9px] px-1 py-0.2 rounded bg-slate-950 text-slate-600 line-through">
+              SV
+            </span>
+          )}
+
+          {pokemon.admittedGames?.includes('SwSh') ? (
+            <span className="text-[9px] px-1.5 py-0.2 rounded bg-blue-950 text-blue-300 border border-blue-800 font-semibold" title="8세대 소드/실드 입국">
+              8세대(SwSh)
+            </span>
+          ) : (
+            <span className="text-[9px] px-1 py-0.2 rounded bg-slate-950 text-slate-600 line-through">
+              SwSh
+            </span>
+          )}
+
+          {pokemon.admittedGames?.includes('BDSP') && (
+            <span className="text-[9px] px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-semibold" title="4세대 리메이크 BDSP 입국">
+              BDSP
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Footer Highlight */}
@@ -82,8 +111,8 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, guide, onSele
           <div className="flex items-center space-x-1 text-slate-300 line-clamp-1">
             {guide ? (
               <span className="text-[11px] font-medium text-amber-300 flex items-center gap-1">
-                <Sparkles className="w-3 h-3" />
-                {guide.conceptTitle}
+                <Sparkles className="w-3 h-3 shrink-0" />
+                <span className="truncate">{guide.conceptTitle}</span>
               </span>
             ) : (
               <span className="text-[11px] text-slate-400">클리어 빌드 생성</span>
