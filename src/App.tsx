@@ -7,6 +7,7 @@ import { FilterBar } from './components/FilterBar';
 import { PokemonCard } from './components/PokemonCard';
 import { DetailModal } from './components/DetailModal';
 import { PartyModal } from './components/PartyModal';
+import { PwaInstallPrompt } from './components/PwaInstallPrompt';
 import { generateDynamicClearGuide } from './utils/guideGenerator';
 import { Sparkles, Compass, ChevronDown } from 'lucide-react';
 
@@ -99,6 +100,9 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100">
+      {/* PWA Install Banner (Smart-Ledger / Digi-Feed Style) */}
+      <PwaInstallPrompt />
+
       {/* Navbar */}
       <Navbar onOpenPartyModal={() => setIsPartyModalOpen(true)} />
 
