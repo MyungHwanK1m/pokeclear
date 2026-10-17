@@ -80,6 +80,8 @@ export interface PartyMember {
   role: string;
   types: PokemonType[];
   spriteUrl: string;
+  nature: string;
+  evSummary?: string;
   heldItem: string;
   keyMoves: string[];
   synergyReason: string;

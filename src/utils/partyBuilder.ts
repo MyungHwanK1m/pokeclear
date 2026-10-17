@@ -1,4 +1,5 @@
 import { BasicPokemon, ClearPartyEntry, PartyMember, PokemonType } from '../types/pokemon';
+import { POKEMON_CLEAR_GUIDES } from '../data/clearGuides';
 
 // Type Weaknesses Map
 export const TYPE_WEAKNESSES: Record<PokemonType, PokemonType[]> = {
@@ -51,6 +52,8 @@ const STORY_PARTNER_POOL: {
   types: PokemonType[];
   role: string;
   spriteUrl: string;
+  nature: string;
+  evSummary: string;
   heldItem: string;
   keyMoves: string[];
   baseCover: string;
@@ -61,6 +64,8 @@ const STORY_PARTNER_POOL: {
     types: ['비행', '강철'],
     role: '약점 완전 무효화 물리벽',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png',
+    nature: '장난꾸러기 (Impish, 방어↑/특공↓)',
+    evSummary: 'HP 252 / 방어 252 / 특방 4',
     heldItem: '울퉁불퉁멧 / 먹다남은음식',
     keyMoves: ['브레이브버드', '철벽', '날개쉬기', '유턴'],
     baseCover: '땅 무효(0배) 및 풀, 독, 벌레를 극단적으로 반감'
@@ -71,6 +76,8 @@ const STORY_PARTNER_POOL: {
     types: ['드래곤', '땅'],
     role: '필드 물리 파괴자 & 에이스',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png',
+    nature: '명랑 (Jolly, 스피드↑/특공↓)',
+    evSummary: '공격 252 / 스피드 252 / HP 4',
     heldItem: '구애머리띠 / 야체열매',
     keyMoves: ['지진', '역린', '스톤에지', '칼춤'],
     baseCover: '전기 무효 및 불/바위/강철/독 포켓몬을 지진으로 일소'
@@ -81,6 +88,8 @@ const STORY_PARTNER_POOL: {
     types: ['불꽃'],
     role: '위협 서포터 & 고화력 불꽃 스위퍼',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png',
+    nature: '고집 (Adamant, 공격↑/특공↓)',
+    evSummary: '공격 252 / 스피드 252 / HP 4',
     heldItem: '생명의구슬 / 자뭉열매',
     keyMoves: ['플레어드라이브', '신속', '인파이트', '도깨비불'],
     baseCover: '풀, 얼음, 강철 타입을 태우고 특성 위협으로 상대 공격력 감소'
@@ -91,6 +100,8 @@ const STORY_PARTNER_POOL: {
     types: ['풀', '격투'],
     role: '기점 마련 100% 수면 요원',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png',
+    nature: '명랑 (Jolly, 스피드↑/특공↓)',
+    evSummary: '공격 252 / 스피드 252 / HP 4',
     heldItem: '기합의띠',
     keyMoves: ['버섯포자', '씨기관총', '마하펀치', '암석봉인'],
     baseCover: '물/땅/바위 카운터 및 100% 수면기로 주인공의 랭업 기점 확보'
@@ -101,6 +112,8 @@ const STORY_PARTNER_POOL: {
     types: ['고스트', '페어리'],
     role: '탈 특성 만능 조커 & 스위퍼',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/778.png',
+    nature: '명랑 (Jolly, 스피드↑/특공↓)',
+    evSummary: '공격 252 / 스피드 252 / HP 4',
     heldItem: '생명의구슬',
     keyMoves: ['치근거리기', '야습', '섀도클로', '칼춤'],
     baseCover: '노말/격투/드래곤 공격을 0배로 흘리고 위기 상황 1턴 세이브'
@@ -111,6 +124,8 @@ const STORY_PARTNER_POOL: {
     types: ['고스트', '독'],
     role: '고속 특수 폭딜러 & 페어리 카운터',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png',
+    nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+    evSummary: '특공 252 / 스피드 252 / HP 4',
     heldItem: '기합의띠 / 구애안경',
     keyMoves: ['섀도볼', '오물폭탄', '10만볼트', '기합구슬'],
     baseCover: '페어리/풀/노말/격투 견제 및 넓은 기술폭으로 스윕'
@@ -121,6 +136,8 @@ const STORY_PARTNER_POOL: {
     types: ['물', '비행'],
     role: '용의춤 물리 불도저 & 위협벽',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png',
+    nature: '명랑 (Jolly, 스피드↑/특공↓)',
+    evSummary: '공격 252 / 스피드 252 / HP 4',
     heldItem: '자뭉열매 / 리샘열매',
     keyMoves: ['폭포오르기', '지진', '얼음엄니', '용의춤'],
     baseCover: '땅 공격 0배 무효 및 불/땅/바위 완벽 카운터'
@@ -131,6 +148,8 @@ const STORY_PARTNER_POOL: {
     types: ['격투', '강철'],
     role: '쌍두 어태커 & 바위/악/노말 저격',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png',
+    nature: '명랑 (Jolly, 스피드↑/특공↓) 또는 겁쟁이',
+    evSummary: '공격(특공) 252 / 스피드 252 / HP 4',
     heldItem: '기합의띠 / 생명의구슬',
     keyMoves: ['인파이트', '러스터캐논', '신속', '파동탄'],
     baseCover: '독 공격 0배 무효 및 악, 얼음, 노말, 바위, 강철 5개 타입 저격'
@@ -141,6 +160,8 @@ const STORY_PARTNER_POOL: {
     types: ['페어리', '비행'],
     role: '하늘의은총 60% 풀죽음 특수벽',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/468.png',
+    nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+    evSummary: '특공 252 / 스피드 252 / HP 4',
     heldItem: '왕의징표석 / 먹다남은음식',
     keyMoves: ['에어슬래시', '매지컬샤인', '파동탄', '날개쉬기'],
     baseCover: '드래곤 및 땅 공격 0배 무효, 에어슬래시 무한 풀죽음'
@@ -151,6 +172,8 @@ const STORY_PARTNER_POOL: {
     types: ['불꽃', '비행'],
     role: '폭발적 화력의 특수 에이스',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png',
+    nature: '겁쟁이 (Timid, 스피드↑/공격↓)',
+    evSummary: '특공 252 / 스피드 252 / HP 4',
     heldItem: '목탄 / 생명의구슬',
     keyMoves: ['화염방사', '에어슬래시', '기합구슬', '용의파동'],
     baseCover: '땅 0배 무효, 풀/벌레/강철/얼음을 한 방에 녹여버림'
@@ -161,6 +184,8 @@ const STORY_PARTNER_POOL: {
     types: ['풀', '독'],
     role: '지속 회복 딜탱 & 상태이상',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png',
+    nature: '조심 (Modest, 특공↑/공격↓)',
+    evSummary: 'HP 252 / 특공 252 / 특방 4',
     heldItem: '검은진흙 / 자뭉열매',
     keyMoves: ['기가드레인', '오물폭탄', '수면가루', '성장'],
     baseCover: '물/전기/페어리 공격 반감 및 수면가루 서포트'
@@ -171,6 +196,8 @@ const STORY_PARTNER_POOL: {
     types: ['물'],
     role: '껍질깨기 올스윕 스위퍼',
     spriteUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png',
+    nature: '조심 (Modest, 특공↑/공격↓)',
+    evSummary: '특공 252 / 스피드 252 / HP 4',
     heldItem: '하양허브',
     keyMoves: ['파도타기', '냉동빔', '러스터캐논', '껍질깨기'],
     baseCover: '껍질깨기로 공격/특공/스피드 2배 뻥튀기 후 전장 청소'
@@ -239,6 +266,8 @@ export function buildCustomPartyForPokemon(mainPokemon: BasicPokemon): ClearPart
         role: partner.role,
         types: partner.types,
         spriteUrl: partner.spriteUrl,
+        nature: partner.nature,
+        evSummary: partner.evSummary,
         heldItem: partner.heldItem,
         keyMoves: partner.keyMoves,
         synergyReason: synergy
@@ -258,11 +287,22 @@ export function buildCustomPartyForPokemon(mainPokemon: BasicPokemon): ClearPart
       role: next.role,
       types: next.types,
       spriteUrl: next.spriteUrl,
+      nature: next.nature,
+      evSummary: next.evSummary,
       heldItem: next.heldItem,
       keyMoves: next.keyMoves,
       synergyReason: next.baseCover
     });
   }
+
+  // Find curated guide nature if available
+  const curated = POKEMON_CLEAR_GUIDES.find((g) => g.id === mainPokemon.id);
+  const mainNature = curated
+    ? `${curated.recommendedSetup.nature.nameKo} (${curated.recommendedSetup.nature.statChange})`
+    : '조심 (Modest, 특공↑) 또는 고집 (Adamant, 공격↑)';
+  const mainEV = curated
+    ? curated.recommendedSetup.evSpread.summary
+    : '주력 공격 스탯 252 / 스피드 252 / HP 4';
 
   // Main Pokemon as Member 1
   const mainMember: PartyMember = {
@@ -271,8 +311,12 @@ export function buildCustomPartyForPokemon(mainPokemon: BasicPokemon): ClearPart
     role: '👑 파티의 주인공 / 주력 에이스',
     types: mainPokemon.types,
     spriteUrl: mainPokemon.spriteUrl,
-    heldItem: '진화의휘석 (미진화 시) / 생명의구슬',
-    keyMoves: ['자속 주력기 1', '자속기 2', '약점 견제기', '랭업/유틸기'],
+    nature: mainNature,
+    evSummary: mainEV,
+    heldItem: curated ? curated.recommendedSetup.heldItem.nameKo : '생명의구슬 / 진화의휘석',
+    keyMoves: curated
+      ? curated.recommendedSetup.moveset.map((m) => m.nameKo)
+      : ['자속 주력기 1', '자속 보조기', '약점 견제기', '랭업/유틸기'],
     synergyReason: `선택하신 주인공 포켓몬입니다. 약점 [${weaknessesList.join(', ')}]을 동료들이 완벽하게 방어해 줍니다.`
   };
 

@@ -248,9 +248,23 @@ export const PartyModal: React.FC<PartyModalProps> = ({
                       </div>
                     </div>
 
+                    {/* Recommended Nature & EV Spread */}
+                    <div className="mt-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800 text-[11px] space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-slate-400 font-semibold">추천 성격</span>
+                        <span className="text-emerald-400 font-bold">{member.nature}</span>
+                      </div>
+                      {member.evSummary && (
+                        <div className="flex items-center justify-between text-[10px] text-slate-400">
+                          <span>노력치 분배</span>
+                          <span className="text-slate-300">{member.evSummary}</span>
+                        </div>
+                      )}
+                    </div>
+
                     {/* Key Moves */}
                     <div className="mt-2 text-[11px] text-slate-400 bg-slate-900/60 p-2 rounded-lg border border-slate-800/60">
-                      <span className="text-slate-500 font-semibold block mb-0.5">추천 기술</span>
+                      <span className="text-slate-500 font-semibold block mb-0.5">핵심 기술</span>
                       <span className="text-slate-200">{member.keyMoves.join(' / ')}</span>
                     </div>
                   </div>
