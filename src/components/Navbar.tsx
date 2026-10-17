@@ -32,7 +32,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-3">
+          <a
+            href="./포켓몬_세대별_미입국_도감.xlsx"
+            download="포켓몬_세대별_미입국_도감.xlsx"
+            className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 font-medium text-xs sm:text-sm transition-all hover:scale-105 shadow-sm shadow-emerald-500/10"
+            title="세대별 미입국 포켓몬 정리 엑셀 다운로드"
+          >
+            <span className="text-base">📊</span>
+            <span className="hidden md:inline">미입국 정리</span>
+            <span>엑셀 다운로드</span>
+          </a>
+
           <button
             onClick={onOpenPartyModal}
             className="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium text-sm shadow-md shadow-indigo-600/20 transition-all hover:scale-105"
