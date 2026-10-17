@@ -11,9 +11,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center space-x-3 cursor-pointer">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-red-500 via-rose-500 to-amber-400 flex items-center justify-center shadow-lg shadow-red-500/20">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
+          <img
+            src="./icon-512.svg"
+            alt="PokeClear Logo"
+            className="w-10 h-10 rounded-xl shadow-lg shadow-red-500/25 transition-transform hover:scale-105"
+          />
           <div>
             <div className="flex items-center space-x-2">
               <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-red-400 via-amber-300 to-emerald-400 bg-clip-text text-transparent">

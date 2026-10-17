@@ -105,11 +105,16 @@ export const App: React.FC = () => {
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         {/* Banner Section */}
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-red-950/60 via-slate-900 to-indigo-950/60 border border-slate-800 p-6 sm:p-10 shadow-2xl">
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-red-950/60 via-slate-900 to-indigo-950/60 border border-slate-800 p-6 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="relative z-10 max-w-2xl space-y-3">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>전국도감 1~9세대 1025마리 전종 지원</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>전국도감 1~9세대 1025마리 전종 지원</span>
+              </div>
+              <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                <span>📱 모바일 앱(PWA) 설치 지원</span>
+              </div>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
               어떤 포켓몬으로도 <br className="hidden sm:inline" />
@@ -121,6 +126,23 @@ export const App: React.FC = () => {
               초라기·피카츄 등 특수 챌린지 전용 가이드부터, 전국도감 1025마리 전 포켓몬의 
               <strong>성격, 노력치, 4슬롯 추천 기술배치, 지닌물건</strong>을 즉시 확인할 수 있습니다.
             </p>
+            <p className="text-xs text-slate-400 flex items-center gap-1.5 pt-1">
+              <span>💡 스마트폰(Safari/Chrome)에서 <strong>'홈 화면에 추가'</strong>를 누르면 전용 앱 아이콘으로 간편 실행됩니다!</span>
+            </p>
+          </div>
+
+          {/* App Icon 3D Card Preview */}
+          <div className="relative z-10 flex flex-col items-center p-4 rounded-2xl bg-slate-900/80 border border-slate-700/60 shadow-xl backdrop-blur-sm shrink-0">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-indigo-600 rounded-3xl blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+              <img
+                src="./icon-512.svg"
+                alt="PokeClear App Icon"
+                className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl shadow-2xl border border-slate-700/50 object-cover"
+              />
+            </div>
+            <span className="mt-2.5 text-xs font-bold text-slate-200">PokeClear 앱 아이콘</span>
+            <span className="text-[10px] text-slate-400">PWA / 홈화면 바로가기 지원</span>
           </div>
         </section>
 
