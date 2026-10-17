@@ -7,6 +7,12 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal, onOpenBattleModal }) => {
+  // PWA 모바일/데스크톱 독립 앱으로 실행 중인지 감지
+  const isStandalone =
+    typeof window !== 'undefined' &&
+    (window.matchMedia('(display-mode: standalone)').matches ||
+      (window.navigator as any).standalone === true);
+
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -45,16 +51,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPartyModal, onOpenBattleMo
             <span>배틀 챌린지</span>
           </button>
 
-          <a
-            href="./포켓몬_세대별_미입국_도감.xlsx"
-            download="포켓몬_세대별_미입국_도감.xlsx"
-            className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 font-medium text-xs sm:text-sm transition-all hover:scale-105 shadow-sm shadow-emerald-500/10"
-            title="세대별 미입국 포켓몬 정리 엑셀 다운로드"
-          >
-            <span className="text-base">📊</span>
-            <span className="hidden md:inline">미입국</span>
-            <span>엑셀</span>
-          </a>
+          {/* 웹 브라우저에서만 엑셀 다운로드 표시 (앱 환경에서는 숨김) */}
+          {!isStandalone && (
+            <a
+              href="./포켓몬_세대별_미입국_도감.xlsx"
+              download="포켓몬_세대별_미입국_도감.xlsx"
+              className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 font-medium text-xs sm:text-sm transition-all hover:scale-105 shadow-sm shadow-emerald-500/10"
+              title="세대별 미입국 포켓몬 정리 엑셀 다운로드"
+            >
+              <span className="text-base">📊</span>
+              <span className="hidden md:inline">미입국</span>
+              <span>엑셀</span>
+            </a>
+          )}
 
           <button
             onClick={onOpenPartyModal}
