@@ -40,6 +40,7 @@ const MAIN_GAME_ADMISSIONS = [
 ];
 
 const SUB_GAME_ADMISSIONS = [
+  { id: 'ZA', label: '레전드 Z-A (미르 도감)' },
   { id: 'PLA', label: '레전드 아르세우스 (히스이 도감)' },
   { id: 'LGPE', label: '레츠고! 피카츄·이브이 (관동 도감)' },
 ];

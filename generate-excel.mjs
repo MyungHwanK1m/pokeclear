@@ -37,7 +37,7 @@ async function buildWorkbook() {
   // 서브 타이틀
   wsGuide.mergeCells('B3:D3');
   const subCell = wsGuide.getCell('B3');
-  subCell.value = '전국도감 1025마리 전종의 7~9세대 본가 및 닌텐도 스위치 외전/서브게임 수록 현황을 완벽 정리한 도감입니다.';
+  subCell.value = '전국도감 1025마리 전종의 7~9세대 본가 및 닌텐도 스위치 외전/서브게임(레전드 Z-A 포함) 수록 현황 완벽 정리 도감';
   subCell.font = { name: '맑은 고딕', size: 10, italic: true, color: { argb: 'FF475569' } };
   subCell.alignment = { vertical: 'middle', horizontal: 'center' };
   wsGuide.getRow(3).height = 25;
@@ -48,14 +48,15 @@ async function buildWorkbook() {
 
   const guideRows = [
     ['시트 이름', '시트 설명', '필터 기능 안내'],
-    ['전체 포켓몬 입국 마스터', '전국도감 No.0001 ~ No.1025 전체 포켓몬의 본가 4개작 및 서브 2개작 입국 매트릭스', '★ 모든 열에 자동 필터 적용. 원하는 타이틀의 [미입국]만 선택 가능'],
+    ['전체 포켓몬 입국 마스터', '전국도감 No.0001 ~ No.1025 전체 포켓몬의 본가 4개작 및 서브 3개작(ZA, PLA, LGPE) 입국 매트릭스', '★ 모든 열에 자동 필터 적용. 원하는 타이틀의 [미입국]만 선택 가능'],
     ['타이틀별 입국 통계 요약', '각 게임별 미입국 마리 수 및 비율(%) 대시보드', '전체 데이터 요약 표'],
     ['9세대 SV 미입국', '스칼렛/바이올렛(본편 + DLC 남청의 원반)에 등장하지 못한 포켓몬 목록', '출신 세대별, 타입별 필터 정렬 가능'],
     ['8세대 SwSh 미입국', '소드/실드(본편 + 익스팬션 패스)에 등장하지 못한 포켓몬 목록', '출신 세대별, 타입별 필터 정렬 가능'],
     ['BDSP 미입국', '브릴리언트 다이아몬드·샤이닝 펄(4세대 도감 기준) 미수록 목록', '출신 세대별, 타입별 필터 정렬 가능'],
+    ['서브-레전드 ZA 미등장', 'Pokémon LEGENDS Z-A(미르 도감)에 등장하지 않는 포켓몬 목록', '미르 도감 외 포켓몬 추출 필터'],
     ['서브-레알세 미등장', 'Pokémon LEGENDS 아르세우스(히스이 도감)에 등장하지 않는 포켓몬', '히스이 도감 외 포켓몬 추출 필터'],
     ['서브-레츠고 미등장', '레츠고! 피카츄·이브이(관동 도감)에 등장하지 않는 포켓몬', '관동 도감 외 포켓몬 추출 필터'],
-    ['스위치 전타이틀 미등장', '닌텐도 스위치(본가 + 레알세/레츠고) 어떤 게임에도 나오지 못한 포켓몬', '3DS 이후 단 한 번도 미등장한 비운의 포켓몬 필터'],
+    ['스위치 전타이틀 미등장', '닌텐도 스위치(본가 + ZA/레알세/레츠고) 어떤 게임에도 나오지 못한 포켓몬', '3DS 이후 단 한 번도 미등장한 비운의 포켓몬 필터'],
   ];
 
   let curRow = 6;
@@ -96,6 +97,7 @@ async function buildWorkbook() {
   const tipRows = [
     '• 모든 시트의 1행(헤더)에 [자동 필터 드롭다운 화살표(▼)]가 기본 활성화되어 있습니다.',
     '• 특정 게임 미입국 포켓몬만 보고 싶다면: [9세대 SV] 열의 필터 화살표(▼)를 누르고 [❌ 미입국]만 체크하세요.',
+    '• 레전드 Z-A 등장 포켓몬만 보고 싶다면: [서브 레전드 Z-A] 열에서 [등장 (O)]만 선택하세요.',
     '• 특정 타입만 모아보고 싶다면: [타입 1] 또는 [타입 2] 열에서 원하는 타입(예: 불꽃, 드래곤)을 필터링하세요.',
     '• 특정 세대 포켓몬만 골라보고 싶다면: [출신 세대] 열에서 (예: 1세대, 5세대 등)을 선택하세요.',
     '• 스위치 전 시리즈 미입국 포켓몬은 [스위치 전체 완전 미등장] 열에서 [🚫 스위치 전체 미등장]만 골라내면 즉시 조회됩니다.',
@@ -122,7 +124,7 @@ async function buildWorkbook() {
   ];
 
   const switchNeverCount = allPokemon.filter(
-    (p) => !p.admittedGames.includes('SV') && !p.admittedGames.includes('SwSh') && !p.admittedGames.includes('BDSP') && !p.admittedGames.includes('PLA') && !p.admittedGames.includes('LGPE')
+    (p) => !p.admittedGames.includes('SV') && !p.admittedGames.includes('SwSh') && !p.admittedGames.includes('BDSP') && !p.admittedGames.includes('PLA') && !p.admittedGames.includes('LGPE') && !p.admittedGames.includes('ZA')
   ).length;
 
   const summaryData = [
@@ -130,9 +132,10 @@ async function buildWorkbook() {
     { title: '[본가] 9세대 스칼렛·바이올렛 (SV) 미입국', status: `${allPokemon.filter(p => !p.admittedGames.includes('SV')).length}마리 미입국`, ratio: `${((allPokemon.filter(p => !p.admittedGames.includes('SV')).length / allPokemon.length) * 100).toFixed(1)}%` },
     { title: '[본가] 8세대 소드·실드 (SwSh) 미입국', status: `${allPokemon.filter(p => !p.admittedGames.includes('SwSh')).length}마리 미입국`, ratio: `${((allPokemon.filter(p => !p.admittedGames.includes('SwSh')).length / allPokemon.length) * 100).toFixed(1)}%` },
     { title: '[본가] 8세대 브다·샤펄 (BDSP) 미입국', status: `${allPokemon.filter(p => !p.admittedGames.includes('BDSP')).length}마리 미입국`, ratio: `${((allPokemon.filter(p => !p.admittedGames.includes('BDSP')).length / allPokemon.length) * 100).toFixed(1)}%` },
+    { title: '[서브] 레전드 Z-A (미르도감 외 미등장)', status: `${allPokemon.filter(p => !p.admittedGames.includes('ZA')).length}마리 미등장 (등장 ${allPokemon.filter(p => p.admittedGames.includes('ZA')).length}마리)`, ratio: `${((allPokemon.filter(p => !p.admittedGames.includes('ZA')).length / allPokemon.length) * 100).toFixed(1)}%` },
     { title: '[서브] 레전드 아르세우스 (히스이도감 외 미등장)', status: `${allPokemon.filter(p => !p.admittedGames.includes('PLA')).length}마리 미등장 (등장 242마리)`, ratio: `${((allPokemon.filter(p => !p.admittedGames.includes('PLA')).length / allPokemon.length) * 100).toFixed(1)}%` },
     { title: '[서브] 레츠고! 피카츄·이브이 (관동도감 외 미등장)', status: `${allPokemon.filter(p => !p.admittedGames.includes('LGPE')).length}마리 미등장 (등장 153마리)`, ratio: `${((allPokemon.filter(p => !p.admittedGames.includes('LGPE')).length / allPokemon.length) * 100).toFixed(1)}%` },
-    { title: '닌텐도 스위치 모든 게임(본가+서브) 완전 미등장', status: `${switchNeverCount}마리 (3DS 시대 이후 유기)`, ratio: `${((switchNeverCount / allPokemon.length) * 100).toFixed(1)}%` },
+    { title: '닌텐도 스위치 모든 게임(본가+서브 전체) 완전 미등장', status: `${switchNeverCount}마리 (3DS 시대 이후 유기)`, ratio: `${((switchNeverCount / allPokemon.length) * 100).toFixed(1)}%` },
   ];
 
   summaryData.forEach((row) => wsSummary.addRow(row));
@@ -154,6 +157,7 @@ async function buildWorkbook() {
     { header: '[본가] 8세대 SwSh', key: 'swsh', width: 18 },
     { header: '[본가] 8세대 BDSP', key: 'bdsp', width: 18 },
     { header: '[본가] 7세대 USUM', key: 'usum', width: 18 },
+    { header: '[서브] 레전드 ZA', key: 'za', width: 18 },
     { header: '[서브] 레알세(PLA)', key: 'pla', width: 18 },
     { header: '[서브] 레츠고(LGPE)', key: 'lgpe', width: 18 },
     { header: '본가 스위치 미입국', key: 'mainNever', width: 20 },
@@ -165,10 +169,11 @@ async function buildWorkbook() {
     const swshIn = p.admittedGames.includes('SwSh');
     const bdspIn = p.admittedGames.includes('BDSP');
     const usumIn = p.admittedGames.includes('USUM');
+    const zaIn = p.admittedGames.includes('ZA');
     const plaIn = p.admittedGames.includes('PLA');
     const lgpeIn = p.admittedGames.includes('LGPE');
     const neverInMainSwitch = !svIn && !swshIn && !bdspIn;
-    const neverInAnySwitch = neverInMainSwitch && !plaIn && !lgpeIn;
+    const neverInAnySwitch = neverInMainSwitch && !zaIn && !plaIn && !lgpeIn;
 
     const row = wsMaster.addRow({
       id: `No.${String(p.id).padStart(4, '0')}`,
@@ -181,6 +186,7 @@ async function buildWorkbook() {
       swsh: swshIn ? '입국 (O)' : '❌ 미입국',
       bdsp: bdspIn ? '입국 (O)' : '❌ 미입국',
       usum: usumIn ? '입국 (O)' : '❌ 미입국',
+      za: zaIn ? '등장 (O)' : '❌ 미등장',
       pla: plaIn ? '등장 (O)' : '❌ 미등장',
       lgpe: lgpeIn ? '등장 (O)' : '❌ 미등장',
       mainNever: neverInMainSwitch ? '⚠️ 본가 미입국' : '등장 이력 있음',
@@ -191,14 +197,15 @@ async function buildWorkbook() {
     if (!svIn) colorCell(row.getCell('sv'), 'FFFEE2E2', 'FF991B1B');
     if (!swshIn) colorCell(row.getCell('swsh'), 'FFFEE2E2', 'FF991B1B');
     if (!bdspIn) colorCell(row.getCell('bdsp'), 'FFFEE2E2', 'FF991B1B');
+    if (zaIn) colorCell(row.getCell('za'), 'FFCCFBF1', 'FF0F766E');
     if (neverInAnySwitch) colorCell(row.getCell('anyNever'), 'FFFEE2E2', 'FF7F1D1D');
   });
 
   styleHeader(wsMaster);
-  wsMaster.autoFilter = { from: 'A1', to: 'N1' };
+  wsMaster.autoFilter = { from: 'A1', to: 'O1' };
 
   // =========================================================================
-  // Sheet 4 ~ 6: 각 타이틀별 미입국 전용 시트 (AutoFilter 적용)
+  // Sheet 4 ~ : 각 타이틀별 미입국 전용 시트 (AutoFilter 적용)
   // =========================================================================
   function addMissingSheet(sheetName, gameKey) {
     const ws = wb.addWorksheet(sheetName);
@@ -232,11 +239,12 @@ async function buildWorkbook() {
   addMissingSheet('9세대 SV 미입국', 'SV');
   addMissingSheet('8세대 SwSh 미입국', 'SwSh');
   addMissingSheet('BDSP 미입국', 'BDSP');
+  addMissingSheet('서브-레전드 ZA 미등장', 'ZA');
   addMissingSheet('서브-레알세 미등장', 'PLA');
   addMissingSheet('서브-레츠고 미등장', 'LGPE');
 
   // =========================================================================
-  // Sheet 9: 닌텐도 스위치 전 타이틀 미등장 시트
+  // Sheet: 닌텐도 스위치 전 타이틀 미등장 시트
   // =========================================================================
   const wsSwitch = wb.addWorksheet('스위치 전타이틀 미등장');
   wsSwitch.columns = [
@@ -250,7 +258,7 @@ async function buildWorkbook() {
   ];
 
   const switchNeverList = allPokemon.filter(
-    (p) => !p.admittedGames.includes('SV') && !p.admittedGames.includes('SwSh') && !p.admittedGames.includes('BDSP') && !p.admittedGames.includes('PLA') && !p.admittedGames.includes('LGPE')
+    (p) => !p.admittedGames.includes('SV') && !p.admittedGames.includes('SwSh') && !p.admittedGames.includes('BDSP') && !p.admittedGames.includes('PLA') && !p.admittedGames.includes('LGPE') && !p.admittedGames.includes('ZA')
   );
 
   switchNeverList.forEach((p, idx) => {
@@ -261,7 +269,7 @@ async function buildWorkbook() {
       nameEn: p.nameEn,
       gen: `${p.generation}세대`,
       types: p.types.join('/'),
-      status: '🚫 닌텐도 스위치 전 타이틀(본가+외전/레알세 포함) 단 한번도 미등장',
+      status: '🚫 닌텐도 스위치 전 타이틀(본가+ZA/레알세/레츠고) 단 한번도 미등장',
     });
   });
 
@@ -277,7 +285,7 @@ async function buildWorkbook() {
   await wb.xlsx.writeFile(outputPathPublic);
   await wb.xlsx.writeFile(outputPathDist);
 
-  console.log('✅ 첫 페이지 설명 및 전 시트 필터(AutoFilter) 적용 완료!');
+  console.log('✅ 레전드 Z-A 포함 엑셀 생성 완료!');
 }
 
 function styleHeader(ws) {

@@ -11,7 +11,7 @@ export interface BasicPokemon {
   artworkUrl: string;
   spriteUrl: string;
   types: PokemonType[];
-  admittedGames: ('SV' | 'SwSh' | 'BDSP' | 'USUM' | 'PLA' | 'LGPE')[];
+  admittedGames: ('SV' | 'SwSh' | 'BDSP' | 'USUM' | 'PLA' | 'LGPE' | 'ZA')[];
   difficulty: '쉬움' | '보통' | '어려움' | '익스트림';
 }
 
