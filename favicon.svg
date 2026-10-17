@@ -1,7 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="45" fill="#f87171" stroke="#1e293b" stroke-width="8"/>
-  <path d="M 5,50 A 45,45 0 0,0 95,50 Z" fill="#ffffff" stroke="#1e293b" stroke-width="8"/>
-  <line x1="5" y1="50" x2="95" y2="50" stroke="#1e293b" stroke-width="8"/>
-  <circle cx="50" cy="50" r="16" fill="#ffffff" stroke="#1e293b" stroke-width="8"/>
-  <circle cx="50" cy="50" r="8" fill="#1e293b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Deep Indigo / Violet -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+
+    <!-- Pokéball Red Cap Gradient -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff4b5c" />
+      <stop offset="60%" stop-color="#ef233c" />
+      <stop offset="100%" stop-color="#c9182b" />
+    </linearGradient>
+
+    <!-- Pokéball White Bottom Gradient -->
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Button Ring Metallic Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <!-- Glowing Core Accent Gradient -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Drop Shadow for Pokéball -->
+    <filter id="ballShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#ef233c" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Inner Glow for Center Core -->
+    <filter id="coreGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Clip Path for Squircle (iOS / Android Adaptive shape) -->
+    <clipPath id="squircleClip">
+      <rect x="0" y="0" width="512" height="512" rx="115" ry="115" />
+    </clipPath>
+  </defs>
+
+  <!-- App Icon Base Squircle -->
+  <rect width="512" height="512" rx="115" ry="115" fill="url(#bgGrad)" />
+
+  <!-- Subtle Ambient Glow Rings in Background -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.2" />
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.25" />
+
+  <!-- Pokéball Container with Shadow -->
+  <g filter="url(#ballShadow)">
+    <!-- Outer Pokéball Shadow/Band Outline -->
+    <circle cx="256" cy="256" r="156" fill="#090d16" />
+
+    <!-- Upper Red Half -->
+    <path d="M 104,256 A 152,152 0 0,1 408,256 Z" fill="url(#redGrad)" />
+    <!-- Upper Specular Highlight -->
+    <ellipse cx="256" cy="148" rx="85" ry="24" fill="#ffffff" opacity="0.3" />
+
+    <!-- Lower White Half -->
+    <path d="M 104,256 A 152,152 0 0,0 408,256 Z" fill="url(#whiteGrad)" />
+    <!-- Lower Subtle Ambient Shadow -->
+    <ellipse cx="256" cy="380" rx="90" ry="18" fill="#94a3b8" opacity="0.35" />
+
+    <!-- Center Black Divider Belt -->
+    <rect x="104" y="244" width="304" height="24" fill="#0f172a" />
+
+    <!-- Outer Button Ring (Dark Slate) -->
+    <circle cx="256" cy="256" r="54" fill="#0f172a" />
+
+    <!-- Middle Button Ring (Chrome Metallic) -->
+    <circle cx="256" cy="256" r="44" fill="url(#ringGrad)" />
+
+    <!-- Inner Button Trench (Dark) -->
+    <circle cx="256" cy="256" r="34" fill="#1e293b" />
+
+    <!-- Center Glowing Button (Cyan Crystal Clear Core) -->
+    <circle cx="256" cy="256" r="25" fill="url(#cyanGlow)" filter="url(#coreGlow)" />
+    <!-- Center Button Specular Highlight -->
+    <circle cx="250" cy="250" r="8" fill="#ffffff" opacity="0.75" />
+
+    <!-- Trophy / Star Sparkle Badge (Top Right of Ball indicating "Clear / Master") -->
+    <g transform="translate(355, 145)">
+      <!-- Gold Badge Background Circle -->
+      <circle cx="0" cy="0" r="32" fill="#0f172a" />
+      <circle cx="0" cy="0" r="28" fill="#f59e0b" />
+      <circle cx="0" cy="0" r="24" fill="#fbbf24" />
+      <!-- Star/Check Shape inside badge -->
+      <path d="M -12,0 L -4,8 L 12,-8" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+
+  <!-- High-tech HUD Accent Ticks -->
+  <line x1="56" y1="256" x2="80" y2="256" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+  <line x1="432" y1="256" x2="456" y2="256" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
 </svg>

@@ -1,0 +1,25 @@
+{
+  "name": "PokeClear - 포켓몬 스토리 클리어 도감",
+  "short_name": "PokeClear",
+  "description": "포켓몬 스토리 클리어 전용 파티 엔트리 및 공략 도감",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#ef233c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./icon-512.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["games", "utilities", "entertainment"]
+}
