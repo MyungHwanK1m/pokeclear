@@ -14,7 +14,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -33,7 +34,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -52,7 +54,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -70,7 +73,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -88,7 +92,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -107,7 +112,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -125,7 +131,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -143,7 +150,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -161,7 +169,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -178,7 +187,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "익스트림"
   },
@@ -195,7 +205,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "익스트림"
   },
@@ -213,7 +224,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -230,7 +242,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "익스트림"
   },
@@ -247,7 +260,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "익스트림"
   },
@@ -264,7 +278,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -281,7 +296,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -298,7 +314,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -315,7 +332,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -331,7 +349,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -347,7 +366,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -364,7 +384,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -381,7 +402,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -398,7 +420,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -415,7 +438,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -433,7 +457,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "어려움"
   },
@@ -451,7 +477,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -469,7 +497,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -487,7 +516,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -504,7 +534,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -521,7 +552,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -539,7 +571,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -556,7 +589,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -573,7 +607,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -591,7 +626,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -609,7 +645,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -627,7 +665,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -645,7 +685,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -663,7 +705,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -682,7 +726,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -701,7 +746,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -719,7 +765,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -737,7 +785,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -756,7 +806,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -775,7 +826,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -794,7 +846,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -811,7 +864,9 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -828,7 +883,9 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -846,7 +903,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -864,7 +922,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -882,7 +941,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -900,7 +960,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -918,7 +979,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -936,7 +998,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -954,7 +1017,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -972,7 +1037,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -989,7 +1056,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1006,7 +1074,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1024,7 +1093,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1042,7 +1113,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1060,7 +1133,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1078,7 +1152,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1097,7 +1172,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1114,7 +1190,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1131,7 +1209,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1148,7 +1228,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1165,7 +1247,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1182,7 +1266,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1199,7 +1285,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1217,7 +1305,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1235,7 +1324,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1253,7 +1343,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1272,7 +1363,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1291,7 +1384,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1309,7 +1404,9 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1327,7 +1424,9 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1345,7 +1444,9 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1362,7 +1463,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1379,7 +1482,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1398,7 +1503,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1417,7 +1523,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1436,7 +1543,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1455,7 +1564,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1473,7 +1584,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1491,7 +1603,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1509,7 +1622,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1526,7 +1640,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1544,7 +1659,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1561,7 +1677,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1578,7 +1695,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1596,7 +1714,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1615,7 +1734,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1634,7 +1754,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1653,7 +1775,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1672,7 +1796,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1690,7 +1816,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1707,7 +1835,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1724,7 +1853,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1741,7 +1871,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1758,7 +1889,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1775,7 +1907,9 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1792,7 +1926,9 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1811,7 +1947,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1830,7 +1967,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1847,7 +1985,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1864,7 +2003,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1882,7 +2022,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1900,7 +2041,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1917,7 +2059,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1935,7 +2079,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -1953,7 +2098,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1972,7 +2118,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -1991,7 +2139,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2009,7 +2159,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2026,7 +2178,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2043,7 +2197,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2061,7 +2216,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2079,7 +2235,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2096,7 +2253,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2113,7 +2271,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2130,7 +2289,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2148,7 +2308,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2166,7 +2327,9 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2185,7 +2348,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2203,7 +2368,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2221,7 +2387,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2239,7 +2407,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2256,7 +2426,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2274,7 +2445,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2292,7 +2464,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "익스트림"
   },
@@ -2311,7 +2485,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2330,7 +2506,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2348,7 +2525,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2366,7 +2544,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2384,7 +2564,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2402,7 +2584,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2420,7 +2604,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2438,7 +2624,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2456,7 +2644,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2474,7 +2663,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2492,7 +2682,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2510,7 +2701,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2528,7 +2720,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2546,7 +2739,9 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2564,7 +2759,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2582,7 +2778,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2600,7 +2797,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2618,7 +2816,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2636,7 +2835,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -2655,7 +2855,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2671,7 +2872,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2687,7 +2889,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -2755,7 +2958,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -2772,7 +2976,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -2789,7 +2994,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3000,7 +3206,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3056,7 +3263,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3074,7 +3282,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3110,7 +3319,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3128,7 +3338,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3289,7 +3500,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3378,7 +3590,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3430,7 +3643,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3486,7 +3700,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3504,7 +3719,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3522,7 +3738,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3558,7 +3775,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3574,7 +3792,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3680,7 +3899,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3698,7 +3918,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3751,7 +3972,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3770,7 +3992,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3807,7 +4030,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3826,7 +4050,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3843,7 +4068,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3860,7 +4086,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3914,7 +4141,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -3933,7 +4161,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3968,7 +4197,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -3985,7 +4215,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -4022,7 +4253,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -4148,7 +4380,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -4165,7 +4398,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -4254,7 +4488,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -4272,7 +4507,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -4307,7 +4543,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -4704,7 +4941,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "익스트림"
   },
@@ -4720,7 +4958,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "익스트림"
   },
@@ -4737,7 +4976,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -4753,7 +4993,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "익스트림"
   },
@@ -4770,7 +5011,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "익스트림"
   },
@@ -4974,7 +5216,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -4993,7 +5236,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -5012,7 +5256,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -5309,7 +5554,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -5588,7 +5834,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6014,7 +6261,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6033,7 +6281,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6298,7 +6547,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -6316,7 +6566,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6351,7 +6602,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6403,7 +6655,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -6421,7 +6674,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6439,7 +6693,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6457,7 +6712,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6475,7 +6731,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -6854,7 +7111,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6871,7 +7129,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6889,7 +7148,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -6906,7 +7166,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6924,7 +7185,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -6942,7 +7204,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6959,7 +7222,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6976,7 +7240,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -6994,7 +7259,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7012,7 +7278,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7030,7 +7297,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7048,7 +7316,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7064,7 +7333,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7081,7 +7351,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7098,7 +7369,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7115,7 +7387,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7133,7 +7406,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7151,7 +7425,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7169,7 +7444,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7187,7 +7463,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7205,7 +7482,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7222,7 +7500,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7239,7 +7518,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7257,7 +7537,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7275,7 +7556,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7291,7 +7573,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7308,7 +7591,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7325,7 +7609,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7344,7 +7629,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7363,7 +7649,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7380,7 +7667,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7397,7 +7685,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7414,7 +7703,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7431,7 +7721,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7448,7 +7739,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7466,7 +7758,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7485,7 +7778,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7502,7 +7796,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7521,7 +7816,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7540,7 +7836,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7557,7 +7854,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7574,7 +7872,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7591,7 +7890,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7609,7 +7909,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7625,7 +7926,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7641,7 +7943,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7658,7 +7961,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7677,7 +7981,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7696,7 +8001,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7715,7 +8021,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7734,7 +8041,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7752,7 +8060,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7770,7 +8079,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7788,7 +8098,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7805,7 +8116,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7824,7 +8136,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7843,7 +8156,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7862,7 +8176,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7881,7 +8196,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7899,7 +8215,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7917,7 +8234,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7936,7 +8254,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7954,7 +8273,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -7972,7 +8292,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -7990,7 +8311,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8008,7 +8330,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8027,7 +8350,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8046,7 +8370,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8062,7 +8387,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8079,7 +8405,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8096,7 +8423,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8114,7 +8442,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8133,7 +8462,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8152,7 +8482,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8171,7 +8502,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8190,7 +8522,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8207,7 +8540,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8226,7 +8560,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8243,7 +8578,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8261,7 +8597,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8279,7 +8616,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8297,7 +8635,8 @@
     "admittedGames": [
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8315,7 +8654,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8333,7 +8673,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8351,7 +8692,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8369,7 +8711,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8388,7 +8731,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8406,7 +8750,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8425,7 +8770,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8443,7 +8789,8 @@
     "admittedGames": [
       "SV",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8461,7 +8808,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8480,7 +8828,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8499,7 +8848,8 @@
       "SV",
       "SwSh",
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8515,7 +8865,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8531,7 +8882,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8547,7 +8899,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8564,7 +8917,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8581,7 +8935,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8598,7 +8953,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8614,7 +8970,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8631,7 +8988,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8647,7 +9005,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8663,7 +9022,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8679,7 +9039,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8695,7 +9056,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8711,7 +9073,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8727,7 +9090,8 @@
     ],
     "admittedGames": [
       "BDSP",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -8857,7 +9221,8 @@
     ],
     "admittedGames": [
       "SV",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8873,7 +9238,8 @@
     ],
     "admittedGames": [
       "SV",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -8889,7 +9255,8 @@
     ],
     "admittedGames": [
       "SV",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -9625,7 +9992,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -9642,7 +10010,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -9659,7 +10028,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -9997,7 +10367,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -10014,7 +10385,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -10961,7 +11333,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -10979,7 +11352,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -11204,7 +11578,8 @@
       "비행"
     ],
     "admittedGames": [
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -11220,7 +11595,8 @@
       "전기"
     ],
     "admittedGames": [
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -11268,7 +11644,8 @@
       "땅"
     ],
     "admittedGames": [
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12185,7 +12562,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12256,7 +12634,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12273,7 +12652,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12290,7 +12670,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12395,7 +12776,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12412,7 +12794,8 @@
     "admittedGames": [
       "SV",
       "SwSh",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -12560,7 +12943,8 @@
     ],
     "admittedGames": [
       "SV",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12577,7 +12961,8 @@
     ],
     "admittedGames": [
       "SV",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -12594,7 +12979,8 @@
     ],
     "admittedGames": [
       "SV",
-      "USUM"
+      "USUM",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -13995,7 +14381,8 @@
       "강철"
     ],
     "admittedGames": [
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "보통"
   },
@@ -14010,7 +14397,8 @@
       "강철"
     ],
     "admittedGames": [
-      "USUM"
+      "USUM",
+      "LGPE"
     ],
     "difficulty": "쉬움"
   },
@@ -15450,7 +15838,9 @@
       "노말",
       "에스퍼"
     ],
-    "admittedGames": [],
+    "admittedGames": [
+      "PLA"
+    ],
     "difficulty": "쉬움"
   },
   {
@@ -15465,7 +15855,8 @@
       "벌레"
     ],
     "admittedGames": [
-      "SV"
+      "SV",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -15481,7 +15872,8 @@
       "땅"
     ],
     "admittedGames": [
-      "SV"
+      "SV",
+      "PLA"
     ],
     "difficulty": "쉬움"
   },
@@ -15497,7 +15889,8 @@
       "물"
     ],
     "admittedGames": [
-      "SV"
+      "SV",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -15512,7 +15905,9 @@
       "독",
       "격투"
     ],
-    "admittedGames": [],
+    "admittedGames": [
+      "PLA"
+    ],
     "difficulty": "보통"
   },
   {
@@ -15527,7 +15922,8 @@
       "악"
     ],
     "admittedGames": [
-      "SV"
+      "SV",
+      "PLA"
     ],
     "difficulty": "보통"
   },
@@ -15542,7 +15938,9 @@
       "비행",
       "페어리"
     ],
-    "admittedGames": [],
+    "admittedGames": [
+      "PLA"
+    ],
     "difficulty": "쉬움"
   },
   {

@@ -31,12 +31,17 @@ const GENERATIONS = [
   { id: 9, label: '9세대 (팔데아)' },
 ];
 
-const GAME_ADMISSIONS = [
+const MAIN_GAME_ADMISSIONS = [
   { id: 'all', label: '전체 (전국도감)' },
-  { id: 'SV', label: '9세대 스칼렛/바이올렛 입국' },
-  { id: 'SwSh', label: '8세대 소드/실드 입국' },
-  { id: 'BDSP', label: '4세대 리메이크(BDSP) 입국' },
+  { id: 'SV', label: '9세대 스칼렛/바이올렛' },
+  { id: 'SwSh', label: '8세대 소드/실드' },
+  { id: 'BDSP', label: '4세대 리메이크(BDSP)' },
   { id: 'USUM', label: '7세대 이전 전원 입국' },
+];
+
+const SUB_GAME_ADMISSIONS = [
+  { id: 'PLA', label: '레전드 아르세우스 (히스이 도감)' },
+  { id: 'LGPE', label: '레츠고! 피카츄·이브이 (관동 도감)' },
 ];
 
 const DIFFICULTIES = ['전체', '쉬움', '보통', '어려움', '익스트림'];
@@ -91,19 +96,19 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </button>
       </div>
 
-      {/* Game Admission Filter (타이틀별 입국 여부 필터) */}
+      {/* Game Admission Filter (본가 타이틀별 입국 여부 필터) */}
       <div className="space-y-1.5 pt-1 border-t border-slate-800/60">
         <div className="flex items-center justify-between text-xs text-slate-400 font-medium">
           <span className="flex items-center gap-1.5 text-purple-400 font-bold">
             <Gamepad2 className="w-3.5 h-3.5" />
-            게임 타이틀별 입국(등장) 필터
+            본가 정규 타이틀 입국(등장) 필터
           </span>
           <span className="font-mono text-slate-400">
             총 <strong className="text-red-400 font-bold">{totalCount}</strong>마리 표시 중
           </span>
         </div>
         <div className="flex items-center space-x-1 overflow-x-auto pb-1 scrollbar-thin">
-          {GAME_ADMISSIONS.map((game) => (
+          {MAIN_GAME_ADMISSIONS.map((game) => (
             <button
               key={game.id}
               onClick={() => onGameAdmissionChange(game.id)}
@@ -111,6 +116,28 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                 selectedGameAdmission === game.id
                   ? 'bg-purple-600 text-white font-bold shadow-md shadow-purple-600/20'
                   : 'bg-slate-950/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-slate-800/80'
+              }`}
+            >
+              {game.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Sub-game Admission Filter (서브/외전 게임 등장 필터) */}
+      <div className="space-y-1.5 pt-1 border-t border-slate-800/60">
+        <div className="flex items-center space-x-1.5 text-xs text-teal-400 font-bold">
+          <span>🌲 서브/외전 타이틀 등장 필터 (레알세 & 레츠고)</span>
+        </div>
+        <div className="flex items-center space-x-1 overflow-x-auto pb-1 scrollbar-thin">
+          {SUB_GAME_ADMISSIONS.map((game) => (
+            <button
+              key={game.id}
+              onClick={() => onGameAdmissionChange(game.id)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all ${
+                selectedGameAdmission === game.id
+                  ? 'bg-teal-600 text-white font-bold shadow-md shadow-teal-600/20'
+                  : 'bg-slate-950/60 text-teal-300 hover:text-white hover:bg-slate-800/60 border border-teal-900/60'
               }`}
             >
               {game.label}
